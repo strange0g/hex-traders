@@ -1,8 +1,15 @@
-# Hex Traders engine
+# Hex Traders
 
 Native Rust library for the 2025 English sixth-edition base-game rules baseline, with three or four seats, fixed and variable setup, all development cards, saving and deterministic replay. The host supplies identity, private randomness, storage and transport. The engine owns game rules, legal choices and state transitions.
 
-Add the checkout as a local path dependency in your host’s `Cargo.toml`:
+Use the versioned Git source in your host's `Cargo.toml`:
+
+```toml
+[dependencies]
+hex-traders-engine = { git = "https://github.com/strange0g/hex-traders", tag = "v0.1.0", version = "0.1.0" }
+```
+
+For local integration, add the checkout as a path dependency:
 
 ```toml
 [dependencies]
@@ -56,8 +63,24 @@ Serialize access to a game at the host. Queries do not reserve an action: `execu
 
 Select each `Viewer` only after host authorization. A seat view contains that seat's own hand, card identities and true score; spectator views omit them. Project the original creation or command receipt separately for each audience. Raw `CreationReceipt` and `Receipt` values, replay headers and records, and snapshots are host-private: they contain private facts, and snapshots/replay headers include the RNG seed and position. Never send them to players or put them in logs. `to_json` on projected views, choices, receipts and errors encodes the corresponding allowlist. The host is responsible for private, atomic snapshot storage and access controls; failed `from_snapshot` creates no replacement engine. Import validates current facts and invariants, not historical honesty. Replay verifies accepted records in order from a host-private starting snapshot; rejected commands are not records, and the host controls stream length and retention.
 
-For JSON integration, `decode_command_envelope` and `Engine::execute_json` accept strict version-1 envelopes; the host must authenticate or replace `actor` before execution; do not pass an unverified client envelope directly to `execute_json`. Inputs reject unknown/duplicate fields, wrong shapes, malformed IDs and noncanonical counters; inputs, snapshots and individual replay units are limited to 64 KiB and container depth 16. Revision, turn and offer counters are canonical decimal strings, with checked ranges; format IDs are API 1, snapshot schema 1 and replay 1, rules `hex-traders-base-v1`, RNG `chacha12-rand010-v1`. Starter tie rerolls can make a native/projected creation receipt grow, so do not assume all output is bounded by the input limit. See [engine API specification](SPEC-engine-api.md) for the complete wire contract and error semantics.
+For JSON integration, `decode_command_envelope` and `Engine::execute_json` accept strict version-1 envelopes; the host must authenticate or replace `actor` before execution; do not pass an unverified client envelope directly to `execute_json`. Inputs reject unknown/duplicate fields, wrong shapes, malformed IDs and noncanonical counters; inputs, snapshots and individual replay units are limited to 64 KiB and container depth 16. Revision, turn and offer counters are canonical decimal strings, with checked ranges; format IDs are API 1, snapshot schema 1 and replay 1, rules `hex-traders-base-v1`, RNG `chacha12-rand010-v1`. Starter tie rerolls can make a native/projected creation receipt grow, so do not assume all output is bounded by the input limit. See the repository [engine API specification](https://github.com/strange0g/hex-traders/blob/v0.1.0/SPEC-engine-api.md) for the complete wire contract and error semantics.
 
 ## Verification and scope
 
-The following links refer to files in the repository. Run the standing local commands in [the plan](tasks/plan.md) and [quality-check evidence](tasks/quality-checks.md); [C11 checkpoint](tasks/c11-checkpoint.md) records the final results. [Rule assertions](tasks/rules-conformance.md), [source setup fixture](tests/support/setup-source.md), [property evidence](tasks/property-evidence.md), [C10 checkpoint](tasks/c10-checkpoint.md), [performance baseline](PERF.md), and [T32 review](tasks/t32-review.md) describe the evidence and its limits. [Specifications](SPEC.md), [capability map](CAPABILITY-MAP.md), and [constraints](CONSTRAINTS.md) define the approved contract. Performance is measured on the recorded native reference machine; the 5% regression threshold is a manual review policy, and absolute budgets are not approved. No browser/Wasm binding, UI, networking, hosted CI, package publication or deployment is included.
+Build and test the native library from the checkout:
+
+```bash
+cargo check --locked --all-targets
+cargo test --locked --lib --tests
+cargo test --locked --doc
+cargo build --locked --release
+```
+
+The following evidence links refer to the complete Git repository; task history,
+specifications and performance archives are omitted from the Cargo package.
+Fixture provenance references also refer to the complete repository. Run the standing local commands in [the plan](tasks/plan.md) and [quality-check evidence](tasks/quality-checks.md); [C11 checkpoint](tasks/c11-checkpoint.md) records the final results. [Rule assertions](tasks/rules-conformance.md), [source setup fixture](tests/support/setup-source.md), [property evidence](tasks/property-evidence.md), [C10 checkpoint](tasks/c10-checkpoint.md), [performance baseline](PERF.md), and [T32 review](tasks/t32-review.md) describe the evidence and its limits. [Specifications](SPEC.md), [capability map](CAPABILITY-MAP.md), and [constraints](CONSTRAINTS.md) define the approved contract. Performance is measured on the recorded native reference machine; the 5% regression threshold is a manual review policy, and absolute budgets are not approved. This source release provides the native library. Browser/Wasm bindings, a user
+interface, gameplay hosting and package-registry publication are outside its scope.
+See [contribution guidance](CONTRIBUTING.md), [security reporting](SECURITY.md) and
+[release notes](docs/releases/v0.1.0.md). Original code and documentation use
+[MIT](LICENSE-MIT) OR [Apache-2.0](LICENSE-APACHE); third-party material retains its
+own licensing and attribution.

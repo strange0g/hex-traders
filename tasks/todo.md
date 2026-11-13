@@ -407,7 +407,7 @@ work done to satisfy sizing or timing.
 <a id="t47"></a>
 ### T47: Deliver the consumer and security guide
 
-- [ ] T47 complete
+- [x] T47 complete
 
 **Module:** github-publication. **Dependencies:** [T46](#t46).
 
@@ -415,18 +415,20 @@ work done to satisfy sizing or timing.
 
 **Acceptance criteria:**
 
-- [ ] README examples compile and describe create/query/execute/projection/save/replay plus authenticated actor/viewer, private seed/storage and deduplication duties; Git/path dependency examples use the intended version/repository.
-- [ ] Contribution/security guidance specifies unchanged quality gates and a real enabled or provisionable private-reporting contact, without invented email/SLA or requests for real private snapshots/seeds.
-- [ ] Release notes describe actual 0.1.0 behavior and limitations; badges and links are activated only when their hosted resources exist and succeed.
+- [x] README examples compile and describe create/query/execute/projection/save/replay plus authenticated actor/viewer, private seed/storage and deduplication duties; Git/path dependency examples use the intended version/repository.
+- [x] Contribution/security guidance specifies unchanged quality gates and a real enabled or provisionable private-reporting contact, without invented email/SLA or requests for real private snapshots/seeds.
+- [x] Release notes describe actual 0.1.0 behavior and limitations; badges and links are activated only when their hosted resources exist and succeed.
 
 **Verification:**
 
-- [ ] Run `cargo test --locked --doc`, `cargo doc --locked --no-deps`, and compile an external path consumer. Check Markdown links and both naming gates; validate the Git dependency and hosted links once T53 provides the tag.
-- [ ] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
+- [x] Run `cargo test --locked --doc`, `cargo doc --locked --no-deps`, and compile an external path consumer. Check Markdown links and both naming gates; validate the Git dependency and hosted links once T53 provides the tag.
+- [x] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
 
 **Files likely touched:** `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, `docs/releases/v0.1.0.md`.
 
 **Estimated scope:** Medium; four documentation files.
+
+**Fresh verification record:** [T47](evidence/release/t47-guide.md).
 
 <a id="t48"></a>
 ### T48: Enable useful contribution and update requests
