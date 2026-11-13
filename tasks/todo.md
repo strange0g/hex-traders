@@ -485,7 +485,7 @@ version URLs remain the declared T53 verification.
 <a id="t49"></a>
 ### T49: Implement the enforced CI contract
 
-- [ ] T49 complete
+- [x] T49 complete
 
 **Module:** github-publication. **Dependencies:** [T36](#t36), [T45](#t45), [T46](#t46), [T47](#t47), [T48](#t48).
 
@@ -493,18 +493,20 @@ version URLs remain the declared T53 verification.
 
 **Acceptance criteria:**
 
-- [ ] Stable `quality`, `coverage`, `advisories` checks run on PR/main/tag/manual events, with weekly refreshed advisories, pinned tool/action revisions, locked dependencies and unchanged failure thresholds.
-- [ ] Read-only token scope, no persisted checkout credentials/secrets for untrusted PR code, bounded jobs, clean coverage data, safe interpolation and complete naming-scan history are verified.
-- [ ] Rulesets encode up-to-date required checks, PR/conversation/linear-history requirements, no main deletion/force pushes and immutable version tags, while zero mandatory approvals permits sole-maintainer PRs.
+- [x] Stable `quality`, `coverage`, `advisories` checks run on PR/main/tag/manual events, with weekly refreshed advisories, pinned tool/action revisions, locked dependencies and unchanged failure thresholds.
+- [x] Read-only token scope, no persisted checkout credentials/secrets for untrusted PR code, bounded jobs, clean coverage data, safe interpolation and complete naming-scan history are verified.
+- [x] Rulesets encode up-to-date required checks, PR/conversation/linear-history requirements, no main deletion/force pushes and immutable version tags, while zero mandatory approvals permits sole-maintainer PRs.
 
 **Verification:**
 
-- [ ] Validate workflow/ruleset syntax and verified upstream action commits; execute every exact job command locally. Inspect permissions/events/cache keys/history depth and negative/tool-error controls without changing production thresholds. Run both naming gates before any push.
-- [ ] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
+- [x] Validate workflow/ruleset syntax and verified upstream action commits; execute every exact job command locally. Inspect permissions/events/cache keys/history depth and negative/tool-error controls without changing production thresholds. Run both naming gates before any push.
+- [x] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
 
 **Files likely touched:** `.github/workflows/ci.yml`, `.github/rulesets/main.json`, `.github/rulesets/tags.json`.
 
 **Estimated scope:** Medium; three workflow/ruleset configuration files.
+
+**Fresh verification record:** [T49](evidence/release/t49-ci.md).
 
 <a id="t50"></a>
 ### T50: Publish the protected GitHub repository

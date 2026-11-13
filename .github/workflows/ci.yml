@@ -1,0 +1,134 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * 1'
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+env:
+  RUSTUP_TOOLCHAIN: '1.98.1'
+  CARGO_TERM_COLOR: always
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  quality:
+    name: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          persist-credentials: false
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/registry/src
+          key: ubuntu-24.04-${{ runner.arch }}-rust-1.98.1-${{ hashFiles('Cargo.lock') }}
+      - name: Install pinned Rust
+        run: |
+          rustup toolchain install 1.98.1 --profile minimal --component rustfmt --component clippy
+          rustc --version
+          cargo --version
+          python3 -c "import tomllib; assert tomllib.load(open('rust-toolchain.toml', 'rb'))['toolchain']['channel'] == '1.98.1'"
+      - name: Verify native library and release tree
+        run: |
+          cargo check --locked --all-targets
+          cargo fmt --all -- --check
+          cargo clippy --locked --all-targets -- -D warnings
+          cargo test --locked --lib --tests
+          cargo test --locked --doc
+          cargo build --locked --release
+          cargo doc --locked --no-deps
+          cargo bench --locked --bench engine -- --test
+          python3 scripts/check-branding.py --self-test
+          python3 scripts/check-branding.py
+          python3 scripts/check-branding.py --history
+          cargo package --locked --list
+          git diff --check
+
+  coverage:
+    name: coverage
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          persist-credentials: false
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/registry/src
+          key: ubuntu-24.04-${{ runner.arch }}-rust-1.98.1-${{ hashFiles('Cargo.lock') }}
+      - name: Install pinned Rust
+        run: |
+          rustup toolchain install 1.98.1 --profile minimal --component llvm-tools-preview
+          rustc --version
+          cargo --version
+          python3 -c "import tomllib; assert tomllib.load(open('rust-toolchain.toml', 'rb'))['toolchain']['channel'] == '1.98.1'"
+      - name: Install pinned coverage checker
+        run: |
+          cargo install --locked --version 0.9.1 cargo-llvm-cov
+          cargo llvm-cov --version
+      - name: Enforce library line coverage
+        run: |
+          cargo llvm-cov clean --locked --workspace
+          cargo llvm-cov --locked --lib --tests --ignore-filename-regex '(^|/)(tests|benches)/' --fail-under-lines 90
+          cargo llvm-cov report --lcov --output-path coverage.lcov --ignore-filename-regex '(^|/)(tests|benches)/'
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: library-coverage
+          path: coverage.lcov
+          if-no-files-found: error
+          retention-days: 14
+
+  advisories:
+    name: advisories
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+          persist-credentials: false
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.cargo/registry/index
+            ~/.cargo/registry/cache
+            ~/.cargo/registry/src
+          key: ubuntu-24.04-${{ runner.arch }}-rust-1.98.1-${{ hashFiles('Cargo.lock') }}
+      - name: Install pinned Rust
+        run: |
+          rustup toolchain install 1.98.1 --profile minimal
+          rustc --version
+          cargo --version
+          python3 -c "import tomllib; assert tomllib.load(open('rust-toolchain.toml', 'rb'))['toolchain']['channel'] == '1.98.1'"
+      - name: Install pinned advisory checker
+        run: |
+          cargo install --locked --version 0.20.2 cargo-deny
+          cargo deny --version
+      - name: Refresh and check advisories
+        run: |
+          cargo deny --locked fetch db
+          cargo deny --locked check advisories
