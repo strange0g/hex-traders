@@ -511,7 +511,7 @@ version URLs remain the declared T53 verification.
 <a id="t50"></a>
 ### T50: Publish the protected GitHub repository
 
-- [ ] T50 complete
+- [x] T50 complete
 
 **Module:** github-publication. **Dependencies:** [T49](#t49); valid authenticated `strange0g` access.
 
@@ -519,27 +519,31 @@ version URLs remain the declared T53 verification.
 
 **Acceptance criteria:**
 
-- [ ] Public `strange0g/hex-traders` has the intended main branch, metadata/topics, Issues/forms/Dependabot/security reporting and verified available security settings; no preparation/private original refs are pushed.
-- [ ] All three hosted checks pass for the assessed commit; main/tag rulesets are active and read back with actual check/app identities and no routine quality bypass.
-- [ ] Disposable formatting/test/coverage/advisory/branding/tool-error controls fail as intended and cannot merge; actor-aware rejected-update/ruleset proof is retained without publishing the former-name literal or weakening protected branches.
+- [x] Public `strange0g/hex-traders` has the intended main branch, metadata/topics, Issues/forms/Dependabot/security reporting and verified available security settings; no preparation/private original refs are pushed.
+- [x] All three hosted checks pass for the assessed commit; main/tag rulesets are active and read back with actual check/app identities and no routine quality bypass.
+- [x] Disposable formatting/test/coverage/advisory/branding/tool-error controls fail as intended and cannot merge; actor-aware rejected-update/ruleset proof is retained without publishing the former-name literal or weakening protected branches.
 
 **Verification:**
 
-- [ ] Use `gh auth status --hostname github.com`, `gh api user --jq .login`, repository/run/ruleset/settings readbacks and actual run IDs to observe conclusions/head SHAs. Retain control exits and blocked merge/update evaluations. Never print tokens or merge a negative control; subsequent main changes use required-check PRs.
-- [ ] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
+- [x] Use `gh auth status --hostname github.com`, `gh api user --jq .login`, repository/run/ruleset/settings readbacks and actual run IDs to observe conclusions/head SHAs. Retain control exits and blocked merge/update evaluations. Never print tokens or merge a negative control; subsequent main changes use required-check PRs.
+- [x] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
 
 **Files likely touched:** Actual GitHub repository/settings; finalized `.github/rulesets/main.json` and `tags.json` if hosted app/check IDs require it; `tasks/evidence/release/t50-hosted.md`.
 
 **Estimated scope:** Small repository-settings and compact hosted-evidence footprint.
+
+**Fresh verification record:** [T50](evidence/release/t50-hosted.md).
 
 <a id="c19"></a>
 ### C19: Hosted enforcement
 
 **Dependencies:** T49–T50.
 
-- [ ] All required hosted checks are green for the actual SHA; active rules/security settings and deliberately failing/tool-error/rejected-update controls are verified.
-- [ ] Required affected checks and evidence pass; review the diff for weakened constraints, lost assertions, private material and unsupported claims.
-- [ ] Present the checkpoint evidence for human review or proceed under applicable autonomous build authorization; record actual status before continuing.
+- [x] All required hosted checks are green for the actual SHA; active rules/security settings and deliberately failing/tool-error/rejected-update controls are verified.
+- [x] Required affected checks and evidence pass; review the diff for weakened constraints, lost assertions, private material and unsupported claims.
+- [x] Present the checkpoint evidence for human review or proceed under applicable autonomous build authorization; record actual status before continuing.
+
+**Checkpoint record:** [T50 hosted enforcement](evidence/release/t50-hosted.md) records the exact bootstrap checks, active rules/security settings, six failing blocked controls, rejected owner update, cleanup and fresh native gates. Existing autonomous authorization permits T51–T53; native performance, independent GO and the immutable release remain pending.
 
 <a id="t51"></a>
 ### T51: Record fresh native performance evidence

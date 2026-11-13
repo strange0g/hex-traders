@@ -4,7 +4,9 @@ Status: accepted for planning by the user's `$plan` invocation on 13 November 20
 Belongs to the approved
 [release capability map](CAPABILITY-MAP-hex-traders-release.md) and depends on the
 [branding provider](SPEC-hex-traders-branding.md). This document specifies
-publication; no repository or release has been created.
+publication. The public repository and enforced checks are verified in
+[T50](tasks/evidence/release/t50-hosted.md); the initial release still requires
+the independent candidate decision and publication verification in T52–T53.
 
 ## Objective
 

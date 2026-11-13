@@ -21,8 +21,8 @@ The approved engine baseline below remains authoritative for game behavior,
 module direction, privacy, deterministic randomness and quality requirements.
 The release specifications govern the identity changes and GitHub infrastructure
 once approved. Native identity was verified in T37. Governing text and public provenance
-use the new identity; fresh history, relocation and publication remain pending
-their task gates. Do not overwrite completed tasks or reinterpret prior checks as fresh
+use the new identity. Fresh history, relocation and the public repository are
+verified in T45 and T50; the initial release remains subject to T52–T53. Do not overwrite completed tasks or reinterpret prior checks as fresh
 release evidence. The [release plan](tasks/plan.md) and [tasks](tasks/todo.md)
 were approved for autonomous implementation by the user's `$build auto` invocation
 on 13 November 2026. Task completion requires new release verification.
@@ -36,7 +36,8 @@ implementation planning. The [plan](tasks/plan.md) and [task list](tasks/todo.md
 are approved, including the carried-forward digital policies and quality defaults.
 The user subsequently authorized `$build auto` to implement the complete plan
 autonomously with subagents. [tasks/todo.md](tasks/todo.md) records implementation
-and verification status. Hosted CI remains outside the approved local build.
+and verification status. Hosted release checks are governed by the
+`github-publication` provider specification.
 
 ## Objective
 
