@@ -187,8 +187,9 @@ timing or memory performance.
 | Hosted enforcement | [T49](todo.md#t49) | Pinned CI and reviewable rulesets | T36, T45–T48 |
 | | [T50](todo.md#t50) | Public repository with verified protections | T49; authenticated owner |
 | | [C19](todo.md#c19) | Hosted green checks and rejected-change controls | T49–T50 |
+| | [T50a](todo.md#t50a) | CI runs for PRs to every base branch | T50 |
 | Release review | [T51](todo.md#t51) | Fresh native timing/memory evidence | T49 |
-| | [T52](todo.md#t52) | Independent assessed release candidate | T50–T51 |
+| | [T52](todo.md#t52) | Independent assessed release candidate | T50–T51, T50a |
 | | [C20](todo.md#c20) | No unresolved release-blocking findings | T51–T52 |
 | Publication | [T53](todo.md#t53) | Immutable v0.1.0 and clean-clone integration | T52 |
 | | [C21](todo.md#c21) | Published release and completion evidence verified | T53 |
@@ -205,7 +206,10 @@ action commits, runs all three stable required checks, and fetches complete
 candidate/default/release history for the naming gate. T50 creates the repository,
 observes bootstrap results, then enables and reads back main/tag protections and
 security features. All subsequent main updates go through the configured PR
-checks. Zero required human approvals supports the sole maintainer; independent
+checks. T50a repairs the reviewed PR branch-filter omission: remove only that
+filter, retain push/security settings, and verify the all-branch event plus
+affected gates and independent review before committing. Zero required human
+approvals supports the sole maintainer; independent
 review remains required by the release specification.
 
 Hosted failure controls must not commit or expose a former-name literal in public

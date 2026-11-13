@@ -8,7 +8,8 @@ including the T37 atomic size exception and Terra/Sol subagent execution.
 No release task is marked complete until its verification passes. [plan.md](plan.md) owns approach, ordering,
 checks and risks. This file is the single task/checkpoint completion source.
 
-The release has 19 tasks, T35–T53, and ten checkpoints, C12–C21. Read the
+The release plan has 19 tasks, T35–T53, and ten checkpoints, C12–C21.
+Focused review repairs are recorded alongside their owning tasks. Read the
 [root](../SPEC.md), [branding](../SPEC-hex-traders-branding.md),
 [publication](../SPEC-github-publication.md) specifications and
 [constraints](../CONSTRAINTS.md) before implementation. The completed engine
@@ -545,6 +546,28 @@ version URLs remain the declared T53 verification.
 
 **Checkpoint record:** [T50 hosted enforcement](evidence/release/t50-hosted.md) records the exact bootstrap checks, active rules/security settings, six failing blocked controls, rejected owner update, cleanup and fresh native gates. Existing autonomous authorization permits T51–T53; native performance, independent GO and the immutable release remain pending.
 
+<a id="t50a"></a>
+### T50a: Run CI for every PR base branch
+
+- [x] T50a complete
+
+**Module:** github-publication. **Dependencies:** [T50](#t50).
+
+**Description:** Repair the Required/P2 finding from the requested T49/T50 review.
+The publication specification requires every PR, but the workflow restricted PR
+base branches to `main`. Remove only that PR filter.
+
+**Acceptance and verification:**
+
+- [x] The ordinary PR event has no branch/path filter; main/version-tag pushes,
+  manual/scheduled events, job permissions and quality requirements are retained.
+- [x] A disposable check fails on the original filter and passes on the fix;
+  restoring the filter fails again. All standing native/naming gates pass.
+- [x] Fresh independent review approves the focused diff; evidence is privately
+  preserved, a compact public record is linked, and the task has one verified commit.
+
+**Evidence:** [T50a CI correction](evidence/release/t50a-ci-every-pr.md).
+
 <a id="t51"></a>
 ### T51: Record fresh native performance evidence
 
@@ -574,7 +597,7 @@ version URLs remain the declared T53 verification.
 
 - [ ] T52 complete
 
-**Module:** github-publication. **Dependencies:** [T50](#t50), [T51](#t51).
+**Module:** github-publication. **Dependencies:** [T50](#t50), [T50a](#t50a), [T51](#t51).
 
 **Description:** Freeze the exact candidate and obtain independent code, security and test assessments of the complete source/fixture/privacy/workflow/settings/evidence path. These are new reports; original reports stay in T35 private preservation.
 
