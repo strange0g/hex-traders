@@ -467,6 +467,21 @@ work done to satisfy sizing or timing.
 
 **Checkpoint:** [T47 guide](evidence/release/t47-guide.md) and [T48 intake](evidence/release/t48-intake.md) pass with independent review and external path integration. Hosted links/config recognition remain the declared T50/T53 checks. Autonomous authorization permits proceeding.
 
+<a id="t47a"></a>
+### T47a: Resolve remaining packaged-document links
+
+- [x] T47a complete
+
+**Dependencies:** T47–T48; required before T49. Independent review found that the
+packaged security guide linked an API specification omitted from the Cargo file
+set. It now links the versioned repository contract; contribution guidance
+explicitly requires the full Git checkout for its specification/evidence links.
+No source, dependency or requirement changed. Link/scope inspection, all 11
+rustdoc tests, branding tree/history and scoped diff checking pass. Published
+version URLs remain the declared T53 verification.
+
+**Evidence:** [T47a link correction](evidence/release/t47a-links.md).
+
 <a id="t49"></a>
 ### T49: Implement the enforced CI contract
 

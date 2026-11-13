@@ -13,5 +13,5 @@ The host must authenticate actor/viewer identity, protect seeds and raw
 receipts/snapshots/replays, serialize access, own retry deduplication and store
 snapshots atomically. The engine's typed boundaries and player projections do not
 replace host access controls. See the [integration guide](README.md) and
-[API contract](SPEC-engine-api.md). Use public issues for ordinary bugs that do not
+[API contract](https://github.com/strange0g/hex-traders/blob/v0.1.0/SPEC-engine-api.md). Use public issues for ordinary bugs that do not
 expose private data or create a security vulnerability.

@@ -1,6 +1,7 @@
 # Contributing to Hex Traders
 
-Keep changes focused on the native library and follow [SPEC.md](SPEC.md), the
+Work from the full Git checkout; specification and evidence links below refer to
+that repository. Keep changes focused on the native library and follow [SPEC.md](SPEC.md), the
 provider specifications, [capability map](CAPABILITY-MAP.md) and
 [CONSTRAINTS.md](CONSTRAINTS.md). Include a synthetic reproduction and traceable
 tests for changed behavior. Preserve private information, rejection atomicity,
