@@ -46,6 +46,13 @@ jobs:
           rustc --version
           cargo --version
           python3 -c "import tomllib; assert tomllib.load(open('rust-toolchain.toml', 'rb'))['toolchain']['channel'] == '1.98.1'"
+      - name: Synthetic test gate control
+        run: |
+          python3 - <<'PYCONTROL'
+          from pathlib import Path
+          p=Path('src/lib.rs')
+          p.write_text(p.read_text()+'\n#[test]\nfn ci_failure_control() {\n    assert!(std::hint::black_box(false));\n}\n')
+          PYCONTROL
       - name: Verify native library and release tree
         run: |
           cargo check --locked --all-targets
