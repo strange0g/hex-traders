@@ -89,6 +89,13 @@ jobs:
         run: |
           cargo install --locked --version 0.9.1 cargo-llvm-cov
           cargo llvm-cov --version
+      - name: Synthetic coverage gate control
+        run: |
+          python3 - <<'PYCONTROL'
+          from pathlib import Path
+          p=Path('src/lib.rs')
+          p.write_text(p.read_text()+'\npub fn ci_coverage_control(mut value: u32) -> u32 {\n'+('    value = value.wrapping_add(1);\n'*1000)+'    value\n}\n')
+          PYCONTROL
       - name: Enforce library line coverage
         run: |
           cargo llvm-cov clean --locked --workspace
