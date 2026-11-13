@@ -1,0 +1,23 @@
+name: Feature request
+description: Propose a focused improvement to the Hex Traders native library.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the consumer need using public or synthetic examples.
+        Keep credentials and real private game data out of issues.
+  - type: textarea
+    id: need
+    attributes:
+      label: Consumer need
+      description: Who needs this and what integration or workflow is blocked?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the smallest useful change and any compatibility impact.
+    validations:
+      required: true

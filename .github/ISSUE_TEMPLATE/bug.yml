@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a reproducible native engine problem.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share synthetic fixtures and public output only. Keep real private seeds,
+        snapshots, replay data and credentials out of issues. Report security
+        vulnerabilities through the private route in SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: Version and environment
+      description: Hex Traders version or commit, Rust version, OS and target.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Minimal code or commands with a synthetic fixture and expected result.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Observed result
+      description: Actual result and sanitized error or public event output.
+    validations:
+      required: true

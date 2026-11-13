@@ -433,7 +433,7 @@ work done to satisfy sizing or timing.
 <a id="t48"></a>
 ### T48: Enable useful contribution and update requests
 
-- [ ] T48 complete
+- [x] T48 complete
 
 **Module:** github-publication. **Dependencies:** [T46](#t46).
 
@@ -441,27 +441,31 @@ work done to satisfy sizing or timing.
 
 **Acceptance criteria:**
 
-- [ ] Issue/PR forms ask for useful public reproduction and verification information and avoid secrets, real private game data and unsupported hosting/UI assumptions.
-- [ ] Dependabot covers Cargo and GitHub Actions at the repository root weekly, with five open PRs per ecosystem and reviewed replay-sensitive changes.
-- [ ] Configuration is valid, all public text uses Hex Traders, and no automatic merge or unrequested workflow subsystem is introduced.
+- [x] Issue/PR forms ask for useful public reproduction and verification information and avoid secrets, real private game data and unsupported hosting/UI assumptions.
+- [x] Dependabot covers Cargo and GitHub Actions at the repository root weekly, with five open PRs per ecosystem and reviewed replay-sensitive changes.
+- [x] Configuration is valid, all public text uses Hex Traders, and no automatic merge or unrequested workflow subsystem is introduced.
 
 **Verification:**
 
-- [ ] Validate YAML/form/Dependabot syntax with an available maintained validator or equivalent review, inspect update policy and local references, run both naming gates and `git diff --check`; verify GitHub recognizes the forms/configuration in T50.
-- [ ] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
+- [x] Validate YAML/form/Dependabot syntax with an available maintained validator or equivalent review, inspect update policy and local references, run both naming gates and `git diff --check`; verify GitHub recognizes the forms/configuration in T50.
+- [x] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
 
 **Files likely touched:** `.github/ISSUE_TEMPLATE/bug.yml`, `.github/ISSUE_TEMPLATE/feature.yml`, `.github/pull_request_template.md`, `.github/dependabot.yml`.
 
 **Estimated scope:** Medium; four maintenance configuration files.
+
+**Fresh verification record:** [T48](evidence/release/t48-intake.md).
 
 <a id="c18"></a>
 ### C18: Consumer and contributor paths
 
 **Dependencies:** T47–T48.
 
-- [ ] External path integration and compiling docs work; contribution/security/issue/PR/update configuration is valid and public text uses the intended identity.
-- [ ] Required affected checks and evidence pass; review the diff for weakened constraints, lost assertions, private material and unsupported claims.
-- [ ] Present the checkpoint evidence for human review or proceed under applicable autonomous build authorization; record actual status before continuing.
+- [x] External path integration and compiling docs work; contribution/security/issue/PR/update configuration is valid and public text uses the intended identity.
+- [x] Required affected checks and evidence pass; review the diff for weakened constraints, lost assertions, private material and unsupported claims.
+- [x] Present the checkpoint evidence for human review or proceed under applicable autonomous build authorization; record actual status before continuing.
+
+**Checkpoint:** [T47 guide](evidence/release/t47-guide.md) and [T48 intake](evidence/release/t48-intake.md) pass with independent review and external path integration. Hosted links/config recognition remain the declared T50/T53 checks. Autonomous authorization permits proceeding.
 
 <a id="t49"></a>
 ### T49: Implement the enforced CI contract
