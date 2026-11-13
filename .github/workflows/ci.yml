@@ -52,6 +52,7 @@ jobs:
           from pathlib import Path
           import subprocess,sys
           Path('ci-branding-probe.txt').write_bytes(bytes([99,97,116,97,110]))
+          subprocess.run(['git','add','--','ci-branding-probe.txt'],check=True)
           sys.exit(subprocess.run([sys.executable,'scripts/check-branding.py']).returncode)
           PYCONTROL
       - name: Verify native library and release tree
