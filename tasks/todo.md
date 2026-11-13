@@ -370,7 +370,7 @@ work done to satisfy sizing or timing.
 <a id="t46"></a>
 ### T46: License the consumable package
 
-- [ ] T46 complete
+- [x] T46 complete
 
 **Module:** github-publication. **Dependencies:** [T45](#t45).
 
@@ -378,27 +378,31 @@ work done to satisfy sizing or timing.
 
 **Acceptance criteria:**
 
-- [ ] Complete MIT and Apache-2.0 texts and Cargo `MIT OR Apache-2.0` metadata apply correctly to original project code; shipped third-party notices retain their original attribution/licensing.
-- [ ] Manifest/version/repository/README/keywords/categories/file selection describe Hex Traders 0.1.0 accurately, with no dependency or RNG graph changes.
-- [ ] The changelog describes the initial consumer capability and declared format identity; Cargo packaging includes required source/docs/licenses and excludes private/tooling/build material appropriately.
+- [x] Complete MIT and Apache-2.0 texts and Cargo `MIT OR Apache-2.0` metadata apply correctly to original project code; shipped third-party notices retain their original attribution/licensing.
+- [x] Manifest/version/repository/README/keywords/categories/file selection describe Hex Traders 0.1.0 accurately, with no dependency or RNG graph changes.
+- [x] The changelog describes the initial consumer capability and declared format identity; Cargo packaging includes required source/docs/licenses and excludes private/tooling/build material appropriately.
 
 **Verification:**
 
-- [ ] Run `cargo package --locked --list`, inspect the exact package file selection/notices, and compare the non-root lock graph with T35. Run `cargo check --locked --all-targets`, `cargo test --locked --doc`, both naming gates and `git diff --check`.
-- [ ] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
+- [x] Run `cargo package --locked --list`, inspect the exact package file selection/notices, and compare the non-root lock graph with T35. Run `cargo check --locked --all-targets`, `cargo test --locked --doc`, both naming gates and `git diff --check`.
+- [x] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
 
 **Files likely touched:** `LICENSE-MIT`, `LICENSE-APACHE`, `Cargo.toml`, `CHANGELOG.md`.
 
 **Estimated scope:** Medium; four package/licensing files.
+
+**Fresh verification record:** [T46](evidence/release/t46-package.md).
 
 <a id="c17"></a>
 ### C17: Clean local release repository
 
 **Dependencies:** T45–T46.
 
-- [ ] The relocated fresh repository passes complete tree/archive/reachable-history gates, native checks and package/license inspection; private preservation is recoverable and excluded.
-- [ ] Required affected checks and evidence pass; review the diff for weakened constraints, lost assertions, private material and unsupported claims.
-- [ ] Present the checkpoint evidence for human review or proceed under applicable autonomous build authorization; record actual status before continuing.
+- [x] The relocated fresh repository passes complete tree/archive/reachable-history gates, native checks and package/license inspection; private preservation is recoverable and excluded.
+- [x] Required affected checks and evidence pass; review the diff for weakened constraints, lost assertions, private material and unsupported claims.
+- [x] Present the checkpoint evidence for human review or proceed under applicable autonomous build authorization; record actual status before continuing.
+
+**Checkpoint:** [T45 export](evidence/release/t45-export.md) and [T46 package](evidence/release/t46-package.md) pass with independent review; the app path readback confirms the fresh checkout. Autonomous authorization permits proceeding.
 
 <a id="t47"></a>
 ### T47: Deliver the consumer and security guide

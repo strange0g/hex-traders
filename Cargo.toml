@@ -3,6 +3,27 @@ name = "hex-traders-engine"
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.98.1"
+description = "Deterministic Rust engine for Hex Traders base-game rules"
+repository = "https://github.com/strange0g/hex-traders"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["board-game", "game-engine", "deterministic", "hex-grid", "rules"]
+categories = ["games", "game-engines"]
+include = [
+    "/src/**",
+    "/tests/**",
+    "/benches/**",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/CONTRIBUTING.md",
+    "/SECURITY.md",
+    "/docs/releases/*.md",
+    "/LICENSE-MIT",
+    "/LICENSE-APACHE",
+    "/Cargo.lock",
+    "/rust-toolchain.toml",
+    "/deny.toml",
+]
 
 [dependencies]
 rand = { version = "=0.10.3", default-features = false, features = ["unbiased"] }
