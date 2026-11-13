@@ -1,5 +1,8 @@
 # Hex Traders
 
+[![CI](https://github.com/strange0g/hex-traders/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/strange0g/hex-traders/actions/workflows/ci.yml)
+[![License: MIT OR Apache-2.0](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue)](LICENSE-MIT)
+
 Native Rust library for the 2025 English sixth-edition base-game rules baseline, with three or four seats, fixed and variable setup, all development cards, saving and deterministic replay. The host supplies identity, private randomness, storage and transport. The engine owns game rules, legal choices and state transitions.
 
 Use the versioned Git source in your host's `Cargo.toml`:

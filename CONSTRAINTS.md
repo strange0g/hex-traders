@@ -3,7 +3,9 @@
 Status: approved written contract with the plan on 9 November 2026.
 Maintainability, modularity, functional reuse, and performance are explicit
 user requirements. Numerical defaults below are approved requirements, not
-measurements. Local check tools are installed; hosted CI does not exist.
+measurements. Local check tools and the pinned hosted checks are verified;
+[release enforcement evidence](tasks/evidence/release/t50-hosted.md) records
+the actual GitHub checks, protections and failure controls.
 Implementation and verification status are recorded in [tasks/todo.md](tasks/todo.md).
 
 Historical measurements and completed-checkpoint conclusions below describe the
@@ -30,7 +32,10 @@ Commands are local gates only after their clean and deliberately failing control
 and tool-error controls have been verified. [T02 evidence](tasks/quality-checks.md)
 records those checks and the bootstrap coverage limitation. Behavior, privacy,
 and architecture still require the listed tests or manual review as implemented.
-Hosted CI is not configured. Do not confuse a report with a gate.
+The release also enforces the pinned `quality`, `coverage` and `advisories`
+checks on GitHub, with deliberately failing and tool-error controls recorded in
+[T50](tasks/evidence/release/t50-hosted.md). Architecture and native performance
+remain manual review gates. Do not confuse a report with a gate.
 
 | Dimension | Approved rule and reason | Verdict / verification | Runs when implemented |
 |---|---|---|---|
