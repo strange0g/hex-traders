@@ -1,0 +1,1 @@
+{"apiVersion":1,"rulesVersion":"hex-traders-base-v1","randomAlgorithm":"chacha12-rand010-v1","actor":1,"command":{"type":"buyDevelopmentCard"},"previousRevision":"3","revision":"4","events":[{"type":"constructionPaid","seat":1,"resources":{"brick":0,"wood":0,"wool":1,"wheat":1,"ore":1}},{"type":"developmentPurchased","seat":1,"card":18,"remaining":24}],"finalScores":null}

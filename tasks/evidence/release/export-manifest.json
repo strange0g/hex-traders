@@ -1,0 +1,514 @@
+{
+  "inputRevision": "ff1c7050a864f38ec025fa686137c380066b60bf",
+  "files": {
+    ".agents/LICENSE": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+    ".agents/SOURCE.json": "906f66d2d1097b39cd60cc70e8e3a96378091a046472632f3de69a0b4486ca75",
+    ".agents/agents/code-reviewer.md": "4efbd53e08e57291cc2869865be809897fbe598767600118ec687d00a557fff4",
+    ".agents/agents/security-auditor.md": "66a3f68f1c691b600ddb44e88afb138e239d0572df37be84e1f9a427c887dd0a",
+    ".agents/agents/test-engineer.md": "a7a0b33ec3294da8fb4ee02ed28c665056bafa48982930fe551dcfadda9117af",
+    ".agents/agents/web-performance-auditor.md": "0928b1cf8103262a364bce0c1fc689a918852e2275441f1b2e687adfa1e607e9",
+    ".agents/commands/build.md": "48419917ab1c05b79894b4ce1769acc37afda1d552432b2b0020344c7f558248",
+    ".agents/commands/code-simplify.md": "364854b841135f59065e2b81d5eefe8ec6166d25e3c4e906683688b1d001df49",
+    ".agents/commands/constraints.md": "fc4f472b2f4c2725a28a2c805cdcfc02a51a383b631b0455bbc4936093fb725a",
+    ".agents/commands/plan.md": "e7694b2c86603d732b919f1fc88b9617f652d95bf830799ef1b641d38e50d2fe",
+    ".agents/commands/review.md": "1db63de098a1500f9e2e80c902a52b73a501630bd9ed44880b1318f25c607461",
+    ".agents/commands/ship.md": "16c632ef577f1942e7f819c944b1c60c18b3302430428912f22b7e6b12bff3ec",
+    ".agents/commands/spec.md": "811fdf8e98e727bdba40ad8a8cde8259a32c90e90190dabcf5fb04e6f60feb49",
+    ".agents/commands/test.md": "6655d78484ff0457ce3f249ecf30448dd42b3ea3529e89399c2c789fd0f52f51",
+    ".agents/commands/webperf.md": "59bcea23bc9e2956cb0d4b314064b7091e11fad48dfdc48cb4e56545fd6f24db",
+    ".agents/docs/agents.md": "ac1d7704dcd70b9e98e8109254ece554381c7c488e54471ff17a648e5bcb13d2",
+    ".agents/references/accessibility-checklist.md": "bf6448af1a98833dcd5974ca4a823aef3c5d99873446fdfe9e64020d3fb8cd2f",
+    ".agents/references/definition-of-done.md": "d1c75d2ae65d2c7a9cd01f93fa8de63e00e75f2fe5d08be224d576157054dcee",
+    ".agents/references/observability-checklist.md": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8",
+    ".agents/references/orchestration-patterns.md": "61e543d86f19f86b83074f8c1c769455c7085a2c72dd47b1da21a8c63785be4a",
+    ".agents/references/performance-checklist.md": "ce946457d4a502846e781a2747cf6af50bcc79b1957a66dc024f50557e8982e1",
+    ".agents/references/security-checklist.md": "84ed77cbba419c95390618f857eca2fadfeec12f2e5d39af4cc1833b94d82a39",
+    ".agents/references/testing-patterns.md": "8607fda9150f639eae3097d322399e08c5978cce56fe3a3c6291553cb89edf88",
+    ".agents/skills/api-and-interface-design/SKILL.md": "cc5e2166c484b2c297e8253f56e7525e5031f81d66101ca4e760ef378ea6bad0",
+    ".agents/skills/browser-testing-with-devtools/SKILL.md": "e28dd45416e6df93f0db6fffeb3aa2477a0e48a22f8e05fd5bb1892484115bb6",
+    ".agents/skills/build/SKILL.md": "befd9080c367c16d7347f62e09f425505561fc7ce5f933f36241c03bda914f89",
+    ".agents/skills/build/agents/openai.yaml": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94",
+    ".agents/skills/ci-cd-and-automation/SKILL.md": "5e0e55c059670a7838dc9d58dc20a3a645c0d43c974416490112af7de522df95",
+    ".agents/skills/code-review-and-quality/SKILL.md": "a47551daf26e3cc5670f5286f9e4850c2fc662d5ba08b86eee895254f3851797",
+    ".agents/skills/code-simplification/SKILL.md": "e13b433345e6bf425c3625442ac1b3507b371c18d7ea3e3db822da7a7f742a29",
+    ".agents/skills/code-simplify/SKILL.md": "fa938e64f0674ac9c29a90839d5d701cdb7c44623a34c08bf150a1c538e3692d",
+    ".agents/skills/code-simplify/agents/openai.yaml": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94",
+    ".agents/skills/constraint-driven-development/SKILL.md": "5a690018d415fa972d1ecc85aed943a4f86b0d3c2305eea84f286ff391422008",
+    ".agents/skills/constraint-driven-development/references/floor-guard.md": "b24459dd17569a1cc12686afb2253d8a47991325310e6e003cba4b384d7535d9",
+    ".agents/skills/constraint-driven-development/scripts/quality-gate.mjs": "460decdd1365c8bedb2538e9e4b7b248693bd78ea662268b314df4f5907d5fc2",
+    ".agents/skills/constraints/SKILL.md": "10f87773026aac69401f897167433ad4cba24eea8657231e7b72af2acd1e7359",
+    ".agents/skills/constraints/agents/openai.yaml": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94",
+    ".agents/skills/context-engineering/SKILL.md": "5ee2929d3aded01587aa24fc9907693c8820f87f807ea0c52a263af718b62d0b",
+    ".agents/skills/debugging-and-error-recovery/SKILL.md": "01cff31fbd8796b444225f8a8386219792c25cebb5d4d76df664afd1d13ed610",
+    ".agents/skills/deprecation-and-migration/SKILL.md": "1896d7db836fc067e2856739664db9ff5bb642526fdff2126d08ec0d588da4b7",
+    ".agents/skills/documentation-and-adrs/SKILL.md": "6fccf3088d5042a3c889faa25113ffa47b9f7f999f4fc9e527d5e5226888442f",
+    ".agents/skills/doubt-driven-development/SKILL.md": "7a7d53d9d2b93ca7af8d882718753dc7887716f143e7937ecbc381f26416bda7",
+    ".agents/skills/frontend-ui-engineering/SKILL.md": "93a0ebffbb6075340d85255ae50724bc5e5e19b0fcbf2ae5d5857b9c5ddf9498",
+    ".agents/skills/git-workflow-and-versioning/SKILL.md": "d77c955f57cfafde73efb7641ed9a478ffaa0f61c0f31bd9fe87317702f1b60d",
+    ".agents/skills/idea-refine/SKILL.md": "c226c1cd369bef2671073f5fd1f4108731691f725ef28f8c8c01d247c214d0c3",
+    ".agents/skills/idea-refine/examples.md": "563204bfbf2f80a444151695205af4cb759e722b3d1e5460e08f278a69c89ba1",
+    ".agents/skills/idea-refine/frameworks.md": "161ebc18fdf2d996bc62a87a2d747cf1bf53548354f8925de25c732c27f00309",
+    ".agents/skills/idea-refine/refinement-criteria.md": "1ca2973a4d01b5cb37ab7ddb2eff77fa4e792634a33d0ce44961c068fc88d51a",
+    ".agents/skills/idea-refine/scripts/idea-refine.sh": "f02a52408a4218047c032d221483abfbb48d11f090bb4915965c7419bf2e0e47",
+    ".agents/skills/incremental-implementation/SKILL.md": "df66536610071727feae1ca95f3c391c248ad828041750ccd3699cce763aa00b",
+    ".agents/skills/interview-me/SKILL.md": "ace4b675999bb504593d572e0f73f3d7e803ad6fddf318445598c82c11939db2",
+    ".agents/skills/observability-and-instrumentation/SKILL.md": "e7fcb0820306d46268de9594d676ad98e35040858926c412b7000faa52a61f87",
+    ".agents/skills/performance-optimization/SKILL.md": "82af71540457cf853893685211f64509cd1e781c0de09d0186f16960f2d6eeba",
+    ".agents/skills/performance-optimization/references/optimization-patterns.md": "fbf724076ffb8ac1a28e1a2773c0b550f5361090024b2dd32e5a682c69b7945f",
+    ".agents/skills/plan/SKILL.md": "2cc1e3d84e6119ce283dc93a6b99f2cd3396fd1c38248a208ff11b8fd6b63652",
+    ".agents/skills/plan/agents/openai.yaml": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94",
+    ".agents/skills/planning-and-task-breakdown/SKILL.md": "ed0f90cc5951ddd4bcab7f871f64efec93a49af9279ef93bc470da77ad8da3f7",
+    ".agents/skills/review/SKILL.md": "425c5bf750141a86284172b4e526c416d945f2cdac2f9e5eb703c5e7d4c064ee",
+    ".agents/skills/review/agents/openai.yaml": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94",
+    ".agents/skills/security-and-hardening/SKILL.md": "358566859a3d791c474eb9fa36939b45875c7480d7d4650eaa092dceae2c1c37",
+    ".agents/skills/security-and-hardening/references/hardening-patterns.md": "18ff8d176eedaaa8ec1fba4cd7adacc8d81105b1b162b404b37c43b563a313c8",
+    ".agents/skills/ship/SKILL.md": "3fcc0fae1c8eddd39cd38212ea24318e940f25bbf0e91a474fdfb9462f05ba0b",
+    ".agents/skills/ship/agents/openai.yaml": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94",
+    ".agents/skills/shipping-and-launch/SKILL.md": "92fec446ec4e947a7b8aac88b851aa5743ff8cb39d5987fb53df08ba8a160d64",
+    ".agents/skills/source-driven-development/SKILL.md": "df38a852658679a67c7a9e4840160570c95094a13a63307e834045ddbf8aa287",
+    ".agents/skills/spec-driven-development/SKILL.md": "b9d05b4259c14550bbffbaafd8201492129926d37ede716db352c6e4f91b404d",
+    ".agents/skills/spec/SKILL.md": "29f3428c0f6c4a7956dd0c353f9855253d5121147834e8acc848616c78563419",
+    ".agents/skills/spec/agents/openai.yaml": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94",
+    ".agents/skills/test-driven-development/SKILL.md": "8fcaa57cf445ca6111fd20d2321bcfc0f424db7cfe526836db7b9bf8828fee39",
+    ".agents/skills/test/SKILL.md": "581880929cdc319368e443b518583f73138092e37aeced5b4f3f11195ac04680",
+    ".agents/skills/test/agents/openai.yaml": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94",
+    ".agents/skills/using-agent-skills/SKILL.md": "30787ef2c77bf1a4729fffed0f6523ba6fcbe81bdc436b36371b78c21394d3c3",
+    ".agents/skills/webperf/SKILL.md": "3c8b9825fcfa7b6fe38429c08e59c7ef0f4d4608fa02bbb55dbda6ec72d3cd44",
+    ".agents/skills/webperf/agents/openai.yaml": "a1499d95abd8447558c535fe5554adcc3c9b988a0a39264a6283d430effe1e94",
+    ".codex/agents/code-reviewer.toml": "dd7116147337dc338238bc115d8bca611075062a419db8d0b3be908d47d79760",
+    ".codex/agents/security-auditor.toml": "a5ab28da200699fa5e5400d74108dc4f9929bf0f8d6c2c15deb560a575ce2732",
+    ".codex/agents/test-engineer.toml": "bc1f2b127d854117f2b75e5be044d5bce165a08ad8edf5158165bc58bf61efc8",
+    ".codex/agents/web-performance-auditor.toml": "62a31dbc706698fb7f0415d6a0674228f45cdc37b0c036df9fed683490d7261e",
+    ".gitignore": "b72ba122753bc57123022e727447905292cb713226f0fffebf780125ca3676c6",
+    "AGENT-SKILLS-INSTALLATION.md": "2882e021d6111fe0103fe4bb6d525bd8cad48f682293745ef71aa105404e0890",
+    "AGENTS.md": "346566f9dea12038004cf3ce0a1d8aada70f2aa9a9e4d0bbbd0f09077e574997",
+    "CAPABILITY-MAP-hex-traders-release.md": "4d118acd22bd5cc1567d3ee7e8a59558dad6a69f84a4988f6960b59ddb591bee",
+    "CAPABILITY-MAP.md": "7a8958d8623c8636289502cfb33057bcdfbec6dec41293c87de8435a940a74ab",
+    "CONSTRAINTS.md": "2ec4c0c741dd6357c103209630abbb701c0e6420b94a92380d837e45ce044e8b",
+    "Cargo.lock": "d6123ed9aef0f2b1ce57008f17db7d6d8e6a695f9af1697bbf76fbd1888cec2e",
+    "Cargo.toml": "f34551371719e86acf3775f6ee546bc849fd383d3e5aa35b73a7ff122cfd956f",
+    "PERF.md": "12def6dda2cb5c8bd30b109d64769d46d211aa5d4a8b6a3ad6168d8843ea40de",
+    "README.md": "9e24dfd98e6b4e47f36a69f0ee4bf591f94812b4b20dd7b30242c38b9685b651",
+    "SPEC-base-rules.md": "5c3638063687cf5e7884acfeb1b1cd62937861bfcb2868b0b1ddc82df64ab894",
+    "SPEC-engine-api.md": "749aed906a46f43719c02db77557d9187147ca3481c7392043319d58ff596139",
+    "SPEC-game-model.md": "9555451698224d0aa2dafb317e0601db42108b103ea6afb6822fd05a0b591baa",
+    "SPEC-github-publication.md": "345ce59d7ec1a26364edb2abbc3226b527b4675a2b992edea82de5aeb57be2ff",
+    "SPEC-hex-traders-branding.md": "749254b95ef32af5d457d1ec3202feab1241c2910e139acce7708c6f13897264",
+    "SPEC-turn-engine.md": "c3789f573484be846b997170dcb41bd0bb65714b423f67c4b1de79253a30e03f",
+    "SPEC.md": "f774fec80b19548b2b44fca1199424b7ba78a2945d6f5baf55a9b56e8dcd68d2",
+    "benches/engine.rs": "fdfe2f7d9ab394928fa407e3c2c1eef50679cefb5ef0bc1d8056923d37459a69",
+    "benches/fixtures.json": "ef172d355103d92de8c4c9cf3e74d12d218754875966bf30bfc64d90623de406",
+    "deny.toml": "67672286203562dce18c57e312915beef40fdfc46bbb29382217a3f2e7fb9820",
+    "performance/review-t31.md": "563464ebfbf554ec2709783c1d0f09130c72efaf8d6974bf596a1520a095138f",
+    "rust-toolchain.toml": "dae18a8743f89707783c1d873595570f29618d0c20f022f8dced263982bba74e",
+    "scripts/check-branding.py": "cf2da6f9442ae2291a14f43fb29cd9c4461fb5025476f0f999f542fe78cf1991",
+    "src/base_rules/building.rs": "15d8b6755806d76a2ee14dd1600c87feda00bb3f7db47237a75f3aa496cb4ce7",
+    "src/base_rules/development.rs": "9d15783f2f8fb47e0cb795db66539d7c8b2aef3eac69042d9106ba0e97690249",
+    "src/base_rules/economy.rs": "d4aa117289b4df8b489de0fc11f9d85a1e7336809049682ee85ad92e8b75ccb3",
+    "src/base_rules/longest_road.rs": "69c387104ab73e8a913912684adcd16ae9aaa1bbf35da2f7d470e2cfdc1c8718",
+    "src/base_rules/mod.rs": "da2e318362ce6c78827e86f88230c507779e4312f829a16bc4be59baa1a4c9c6",
+    "src/base_rules/robber.rs": "e34306e428a2cd5b9cc1b510a10838b87c2d73c019e3de2aa904239737877621",
+    "src/base_rules/trade.rs": "7ad17676f51417e76e92b340f85beecb88e6365a1d22cb3d1a04f97c689c7b8c",
+    "src/engine_api/bank_trade_tests.rs": "4fb707862472ac87a2374237a746e6a9591a35575e33ca8b96b48de91ddb5763",
+    "src/engine_api/city_tests.rs": "956d181015a19dc71a6f7b4b2afb953488da1c72e0b25c44cc1fa818daacce53",
+    "src/engine_api/command.rs": "cb460d34886825519da748575a5540e7be19ffb66e4cfb670ccd29258969c884",
+    "src/engine_api/command_tests.rs": "14e605ba0e9304d4639da4295e17e1a0d2693518a8120989eefa255e4711f09f",
+    "src/engine_api/development_effects_tests.rs": "edc00af55c93fa0577a990214176fbbe47bea043934ef33a6ddcab3fddac0516",
+    "src/engine_api/development_tests.rs": "83e150d71136a4b767af1deb325b9979562a2ca2cc257a07b95c095677260f8b",
+    "src/engine_api/free_road_tests.rs": "833f5f0f5f08e5e3d6d61122bd961c78640bec9d365d24826fb31b0d89e9bd48",
+    "src/engine_api/invention_tests.rs": "96db00a15068d80bb04eccf9de7a17cd090e3b18623be5f8b28b659a7161409e",
+    "src/engine_api/knight_tests.rs": "047876d7d5ded1746585a7dd231549db75f3180d499031bc22b6014349129353",
+    "src/engine_api/mod.rs": "b2cf13dc3314b5e0f62b205500144ff32f92d8d6ad16e8e87e52601013a52c3e",
+    "src/engine_api/native_contract_tests.rs": "9f8aa6ddf00199db6b00bd52818a759013c1b5bcdf4027628d3fa895dc4036be",
+    "src/engine_api/receipt.rs": "6f64e778852358d3f72bd63c97bc88e790d34dfc2d4f00961b2c57dcdbef1205",
+    "src/engine_api/receipt_tests.rs": "8c2e537937cb58bdd4dbc1d70f4a52af40e736ccda18fe88240a293029dd89d6",
+    "src/engine_api/replay.rs": "1e86ba7fe3592f5dccdadda4a8bb903e026f19a4baeec780893d156a1ed33e57",
+    "src/engine_api/road_tests.rs": "47f3ce07fffc987907918db834700f878357eeb02db3a6d709ca6e3636d526c4",
+    "src/engine_api/robber_tests.rs": "93782a223496b217c612d9364f40bfe4b58713adac0f25aa20ae2a0ddfb46af6",
+    "src/engine_api/settlement_tests.rs": "a8888a4469f144109cd00e3f487eee1d32f3acea92ea4edcc303efc8facd1040",
+    "src/engine_api/snapshot.rs": "651ec6984cf667ad9e671e23812b77276bffc6348c8163a5e45f00087a0155b8",
+    "src/engine_api/snapshot_decode.rs": "6d08c71bb59d35eabf18416169c6903ccfc5accbbe08695a0a92abb612bcd4cc",
+    "src/engine_api/trade_accept_tests.rs": "999cca4298e90bd48780a52c02e5f9c61eee6f17179ac7737158f3600f148a8e",
+    "src/engine_api/trade_offer_tests.rs": "e3ad1393b02f7a54758b859c354ea3eee2158774e5c749269d579ed50e4563e5",
+    "src/engine_api/victory_tests.rs": "a36151ac4b3cc594b57554a4f9fb219817af8c5af882b7ee683bc90c6613c5b8",
+    "src/engine_api/view.rs": "af976d3abd35df813a26cf97aaa19c869ab8d25ef0f12fdb7d8939ffc1e91b28",
+    "src/engine_api/wire.rs": "162e581ec243ed589eec216ff95ba826150fca444400f5b0f4e10b93373c2606",
+    "src/engine_api/wire_output.rs": "94d2370cd0532e5e893ce3170da909f429b4700532d8b14a121348714aa7c5f1",
+    "src/engine_api/wire_output_tests.rs": "c4c9157a997b52b5beb24183351247e381f256fb66f9a3a56a963e11cd690d34",
+    "src/game_model/board.rs": "6e4516e1da2e5fbc2228d3c0bea3b28dacb472dd04993cd2b796b79db16b3eda",
+    "src/game_model/mod.rs": "9a9b2d8bb599def3193cbab358d23df8ad68da9d541c6424fb4abc2b55af511c",
+    "src/game_model/state.rs": "5ef5261ddbc26310bdf2ff6992c7a5d513ca373170f3e9b875a2f64469027dbd",
+    "src/lib.rs": "d1a156ad6bb91880a66d94886e70ef3752551130c981aac5ba2ef5f33dafe7b0",
+    "src/turn_engine/building.rs": "80cc9b8f2665ca9d85c5f2ba91214ee2381e7a33b23cec362de7ab706c3e397a",
+    "src/turn_engine/creation.rs": "e9746571d29247b39ea32b9bd21a4fc8169fcdc0c4cf7bb9ddcdb01269ed1b28",
+    "src/turn_engine/development.rs": "ae1d82696ba7e9cae8608fca7a1f453b5b2093d26a46109dccbf8f0161761177",
+    "src/turn_engine/gameplay.rs": "6b91fb934789cae7db3c4b0aabee6b1079324313b3f061329155d41f8cb81dea",
+    "src/turn_engine/invariants.rs": "26f5b460738c8d34e0a6408176baeb5a7ac41931e5c714f56822bc06f3deab56",
+    "src/turn_engine/invariants_tests.rs": "4c6f58ef3789e05c1ed41b4d29be902a2edefbf2eb297165c691c83653339a93",
+    "src/turn_engine/mod.rs": "15c67fd11f2d4ed6806224a1a801f7958df492f5598a4b47be098be1b741ddcf",
+    "src/turn_engine/negotiation.rs": "4473284b943e8a05fb7b740edad05c338ac786078be6eb5e529d36d2933098c8",
+    "src/turn_engine/robber.rs": "57761c509e6c1ab66989977b84e85dc414e628dbbffe7804610b11892ca1e3c9",
+    "src/turn_engine/setup.rs": "fcfb576e92d4c54194a993fb5392509bd37c8b89361ffbd2c39a142aec83b1f5",
+    "src/turn_engine/trade.rs": "e8e0c3332557d7220d388663215ffa02659116312b038b35d1ef9dc2288b8c46",
+    "tasks/c03-checkpoint.md": "04f04dc83f96e2e67edc8afa64beced9f842a5f6df4385fc0fe8c7865d65bf96",
+    "tasks/c04-checkpoint.md": "9df663cf8d4d0aec0d135ecf66cafedc0d2603273a33d51b39c6c2cb4de6b1bd",
+    "tasks/c05-checkpoint.md": "860f35c4ec18c65ee518143861656b7666bba4810114215136e993130680320d",
+    "tasks/c06-checkpoint.md": "c818298583bad81d827508f54536da98481ce940126753da2dee250278b3cb65",
+    "tasks/c07-checkpoint.md": "0af9f11f8778009c1da704ebc49c8b3350527e7f1340de3b3deda9a64a84e50f",
+    "tasks/c08-checkpoint.md": "03397a6f4f332e8741e327600b12aacd1270a8f3c9dbc484234cf7f7201a4593",
+    "tasks/c09-checkpoint.md": "3c5fb225ddf45365586b009808c54f18d5838d74ccaf3939fcfd9d117c6e23f7",
+    "tasks/c10-checkpoint.md": "7a3ae272c078915d0d59dfe2db4de2c90244156e8b9dbf7f1f97a8571ffe12fd",
+    "tasks/c11-checkpoint.md": "b87d4235e3f36c623e69678cc2e21473078ba6166aaae9f638f85f92855dbea1",
+    "tasks/evidence/README.md": "fe3a36826a6d2e1c4b4dbb4a28ce4a32fa32b622163bd7c962f54498824c6f8e",
+    "tasks/evidence/release/t35-preservation.md": "1cbd9838db0b53024eb879b2aee00d68f56f29e31261a4485ffd4b1a91bf4b4d",
+    "tasks/evidence/release/t36-scanner.md": "9ac8ee98d530914bf43a8d39d2e837fd4803213a0e6784362f9f00db85faf8c5",
+    "tasks/evidence/release/t37-identity.md": "22c9dafeace2c164ef705b51acd563639962f6790a79477636f26dc21ed0bf9c",
+    "tasks/evidence/release/t38-provenance.md": "21229979416f4e334aa4b5ced20b779c957320e280ee084a016f0b9ae44f97fd",
+    "tasks/evidence/release/t39-specifications.md": "6223becb96d9d9a1314c8c460e58884fcb8ee69e16c75f8afb9575cfde23cfb8",
+    "tasks/evidence/release/t40-quality.md": "d5d8352798be05f1570838c15821a471205d3e88ba3c75289ba0077155312b0b",
+    "tasks/evidence/release/t41-summaries.md": "e06c442a025efe5eb4b702d8cb4c3a851057e42eadb80d91b33221c9a02fb0d2",
+    "tasks/evidence/release/t42-summaries.md": "2e827aa83392f00c3367e5a832bfeb40a5d26a91c13eb1ba14d0c602e4f5efe4",
+    "tasks/evidence/release/t43-summaries.md": "490a6b186b6bc9ba81d5ab385bc841e0c0e09063508cde9ac63e6566dccfad73",
+    "tasks/evidence/release/t44-history.md": "7d8cdd779edcfa4882cec2a1084b5cce814d56dad3e7ae0b9b1b63e1de42393e",
+    "tasks/plan.md": "c6d2809a36139250c51de0936d27db6bd85173d38ac948e160599c6adafb476b",
+    "tasks/property-evidence.md": "a88f0424ff053fc4c524cd5bd7d297197ea968485ebb8b1c4c7e6ac8f18907d8",
+    "tasks/quality-checks.md": "88c4b1d1ee3844390ed3f331259dfb296e3932f202ab937b0dbadfa6e14c60dd",
+    "tasks/rules-conformance.md": "1e914e0c6dff136a0d7549284f0d788c125f0ebd90ef14034f7a73cfbafe4f9a",
+    "tasks/ship-decision.md": "63b5586d4ac0dae200c0242f4347c4490ff71ea0eaf971331e354181f396d3b3",
+    "tasks/t32-review.md": "1c6306b7ce944fb6683c8719a73f91459215a01652161068c7b19dfcd9ea5415",
+    "tasks/t33-review.md": "2919ffc87d2fe2764d6345deca15dd97a7848d64483ea4598b6df40ee65dafac",
+    "tasks/todo.md": "4d43b1183dca207ef5d26e442e1d26c47c538d3640bcc84925287a997b641ec4",
+    "tests/api_contract.rs": "ce35da7e1da304f51fd164d79c2c883afcccbc008dcec7db3afea2d0d9d7fe20",
+    "tests/game_sequences.rs": "22bb2f563b26f69718409bec61a4148b329e3074f863fb62c094c90f49b6f046",
+    "tests/game_sequences/bank_trade.rs": "c06e24cf64ebe20f4f77262a1d1ffd83762e857bb0d448e4f610766ad53d23af",
+    "tests/game_sequences/city.rs": "9053508c685f988080e4306cc6a5333ba3ea5eb852b970f6ec0f9ada507d875e",
+    "tests/game_sequences/development.rs": "bd11bb31a8ca21ca71470b587733c2e782d4d5de7e1f74ec5fe3ddc10fe16a1f",
+    "tests/game_sequences/free_road.rs": "3a905c2f73d367ba4cf90113fbc93155db1f0c262ea064f5b2e40b780ea350ea",
+    "tests/game_sequences/full_games.rs": "3b3e4083d93006312d66de1a71d6571cefbf9a3060dabd18e8c7afcc54af90f2",
+    "tests/game_sequences/invention.rs": "791b0bbe21f6c3eafc93bd67f4c91d4f0e66d8cc0575cf2cb4192c7218b5326f",
+    "tests/game_sequences/knight.rs": "e730e6c0913c8853b41b3b2143ed672a45208504c1120f81c63e736973093436",
+    "tests/game_sequences/monopoly.rs": "88952e1577e1059e7f5fe9346a1cfa85caf53c586785e9a512c869ae25d3dfba",
+    "tests/game_sequences/road.rs": "4389fc34ac7fee2db2ac79ea4eaf3a40abe6d8818686839b9435fd868b8d5ee4",
+    "tests/game_sequences/settlement.rs": "c84dc883b889065e8b8aa9306ccbfcd5c5672aafb5bdbd8b99e5a9b892083e40",
+    "tests/game_sequences/trade_accept.rs": "d642216a09d0b38b16f9a75310fa206cbcebb731c99486d641ce6abf905d35c9",
+    "tests/game_sequences/trade_offer.rs": "70812e6065473d62eb4c575f06e914ae2cbd1c376263cc56f54e67c9dfbe9598",
+    "tests/game_sequences/verified_game.rs": "0806dc2a784872015f1e4108da2e9c5a303878848d9c55159f255bb83851d91f",
+    "tests/game_sequences/victory.rs": "3c18551cce791944a73548d52a77915bf5ae5b0b63ab05c35e98dac0f8e38df8",
+    "tests/model_invariants.rs": "4f6a2d1522d9a7bc521fc9e737da7e4a8cef5b14b3c1984dd3a4fc6e59a9aa4f",
+    "tests/privacy.rs": "9c7eea26f7f920f7ddcf54b43eac8306a7d141d820b25280c7bdb5ccabd39973",
+    "tests/property_sequences.rs": "0027c1e90baeea2575f70b0c5b0d7cf7015e59854b25aa412c189d48156bb9d2",
+    "tests/property_sequences/commands.rs": "244a9a872019596bfda5c1f5e9569d5b2a6075fed8ed1a306d8853e14dd07073",
+    "tests/property_sequences/malformed.rs": "64fa03e56603c0d10a989ae913b90a2128128fe5a62606585a26a8cb3c46496d",
+    "tests/replay.rs": "69ac09702aeed0c55b89a448fdededa05b42be466d68bf77e60599404e0e3af6",
+    "tests/rules_conformance.rs": "1208288b8cc53076cbdf8160b1368ea7a7e74e44c206b1955e7fdf969e98d54c",
+    "tests/snapshot_import.rs": "62543c647369d13a9ea38ec926175d0735c1d4a91c8502f92667be94dcc77ba7",
+    "tests/snapshot_roundtrips.rs": "04bb3ee0b8cc9a93c2fb04bbeb99ac35f5205dfe4afb2822e7e0328ec2466150",
+    "tests/snapshots.rs": "83e16590ac82f2bfda677ae76fab9781095c494fa0d316d3914bb584e0f20b92",
+    "tests/support/free-road-prefixes.json": "2154bde6ddf8e1cb3657f3ce91e9d5e53223172bca7d5f969a3ed4c118656668",
+    "tests/support/full-games-source.md": "7dfba1666c74a401ab02101d7eb52bece01e2f7c6c9ae95c404bd7fdd3fae2a1",
+    "tests/support/full-games.json": "336706eea604f01c25ae39d93416bca6c4ef67f85bcbd3464823fae4c4753538",
+    "tests/support/longest-route.json": "25a40f760521ac321a69ba40fe28983658c11a761bad0125ed4ac689f0fed5ae",
+    "tests/support/replay-v1.json": "8f3c272c38ed47d21fe2acbc94039ad961cf917cf6127b839739ec17a19b0b9c",
+    "tests/support/setup-source.md": "c7bc1045a7cb22a820638b41a2cd9cc26ac08bad2c2c9ccacb969623fa320770",
+    "tests/support/setup.json": "c0a539dbfa18d7622b3d8563d18e68c6a48ebad14936f00c15d95e8806373e66",
+    "tests/support/snapshot-v1.json": "91a920b5f94d7ff47df9f550b45b96bb27901598b1677b66b39d1e6be1020b61",
+    "tests/support/victory-prefixes.json": "81042c5cfe50a783d9f7ac5a3da2586907658eefa013695f078ad1c1132eb5c1",
+    "tests/support/victory-source.md": "00be4084f30c183166ca21b3d20cfcd9b845c5c36049a95b677bf3b79c6c6fc8"
+  },
+  "excludedOriginalFiles": [
+    {
+      "path": "performance/evidence/affinity.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/base-commit.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/binary-sha256.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/cpu-governor.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/cpu-siblings.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/cpu7-governor-after.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/criterion-approved.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/criterion-logs.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/criterion-medians.tsv",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/criterion-repeat-1.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/criterion-repeat-2.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/criterion-unpinned-approved.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/criterion-unpinned-repeat-1.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/criterion-unpinned-repeat-2.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/debug-build.log",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/debug-commands.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/debug-sizeof.log",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/debug-types.log",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/end-time.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/fixture-proof.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/gates.json",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/gates.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/gdb-version.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/hardware-lscpu.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/hardware-meminfo.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/hardware-os.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/input-sha256.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/load-after.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/load-before.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/massif-16-a-controller.log",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/massif-16-a.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/massif-16-b-controller.log",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/massif-16-b.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/massif-64-a-controller.log",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/massif-64-a.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/massif-64-b-controller.log",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/massif-64-b.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/massif-controller.py",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/massif-snapshots.tsv",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/pinned-end-time.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/pinned-load-after.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/pinned-load-before.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/pinned-start-time.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/sha256.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/start-time.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/timing-commands.sh",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "performance/evidence/toolchain.txt",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/c11-evidence.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/README.md",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/SHA256SUMS",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/checkpoints.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/inventory.json",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/members.json",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/oracles.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/ship-native.tar.gz",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/source-hashes.json",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/t34-verification.md",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/validation/SHA256SUMS",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/validation/arithmetic-reproduction.json",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/validation/c11-historical-audit.json",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/validation/final-archive-audit.json",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/validation/git-and-source-audit.json",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/validation/owner-inventory.py",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/validation/owner-packaging.py",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/validation/owner-verification.json",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/validation/owner-verification.py",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/validation/root-final-check.json",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/evidence/validation/t34-independent-review.md",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/ship-reports/SHA256SUMS",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/ship-reports/code-review.md",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/ship-reports/security-audit.md",
+      "reason": "Privately preserved original evidence"
+    },
+    {
+      "path": "tasks/ship-reports/test-analysis.md",
+      "reason": "Privately preserved original evidence"
+    }
+  ],
+  "generatedManifest": "tasks/evidence/release/export-manifest.json; self digest recorded by Git",
+  "excludedMetadata": [
+    "original .git objects/refs/config",
+    "target build trees",
+    "credentials and real private games"
+  ]
+}

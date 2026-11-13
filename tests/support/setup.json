@@ -1,0 +1,506 @@
+{
+  "source": {
+    "file": "CN3081-v6.250401.pdf",
+    "sha256": "0d81a40c1d4eb5eb438a62f80d71cdaab5f00404722c3cfa0b106d79b635ebc6",
+    "rulesEdition": "2025 English sixth edition",
+    "checked": "2026-11-09",
+    "pages": [
+      3,
+      4,
+      5,
+      11
+    ],
+    "method": "Full relevant page rendering and image inspection; graph-ID overlay; no text-only conformance claim",
+    "privateOriginal": "CN3081 v6.250401; original URL retained privately; see setup-source.md"
+  },
+  "fixed": {
+    "terrainByHex": [
+      "desert",
+      "field",
+      "pasture",
+      "hills",
+      "pasture",
+      "forest",
+      "mountain",
+      "forest",
+      "field",
+      "hills",
+      "forest",
+      "pasture",
+      "field",
+      "hills",
+      "mountain",
+      "forest",
+      "mountain",
+      "field",
+      "pasture"
+    ],
+    "numberByHex": [
+      null,
+      8,
+      11,
+      6,
+      3,
+      4,
+      9,
+      10,
+      5,
+      12,
+      11,
+      5,
+      2,
+      9,
+      4,
+      8,
+      6,
+      3,
+      10
+    ],
+    "robberHex": 0,
+    "presets": [
+      {
+        "role": "Blue",
+        "firstSettlement": 31,
+        "firstRoad": 46,
+        "secondSettlement": 40,
+        "secondRoad": 57,
+        "startingHand": [
+          1,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "role": "Red",
+        "firstSettlement": 39,
+        "firstRoad": 55,
+        "secondSettlement": 9,
+        "secondRoad": 14,
+        "startingHand": [
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "role": "Orange",
+        "firstSettlement": 19,
+        "firstRoad": 21,
+        "secondSettlement": 17,
+        "secondRoad": 25,
+        "startingHand": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "role": "White",
+        "firstSettlement": 41,
+        "firstRoad": 59,
+        "secondSettlement": 29,
+        "secondRoad": 42,
+        "startingHand": [
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      }
+    ],
+    "portsClockwise": [
+      {
+        "edge": 0,
+        "vertices": [
+          0,
+          3
+        ],
+        "kind": "generic",
+        "rate": 3
+      },
+      {
+        "edge": 3,
+        "vertices": [
+          1,
+          5
+        ],
+        "kind": "wool",
+        "rate": 2
+      },
+      {
+        "edge": 17,
+        "vertices": [
+          10,
+          15
+        ],
+        "kind": "generic",
+        "rate": 3
+      },
+      {
+        "edge": 38,
+        "vertices": [
+          26,
+          32
+        ],
+        "kind": "generic",
+        "rate": 3
+      },
+      {
+        "edge": 61,
+        "vertices": [
+          42,
+          46
+        ],
+        "kind": "brick",
+        "rate": 2
+      },
+      {
+        "edge": 69,
+        "vertices": [
+          49,
+          52
+        ],
+        "kind": "wood",
+        "rate": 2
+      },
+      {
+        "edge": 66,
+        "vertices": [
+          47,
+          51
+        ],
+        "kind": "generic",
+        "rate": 3
+      },
+      {
+        "edge": 49,
+        "vertices": [
+          33,
+          38
+        ],
+        "kind": "wheat",
+        "rate": 2
+      },
+      {
+        "edge": 18,
+        "vertices": [
+          11,
+          16
+        ],
+        "kind": "ore",
+        "rate": 2
+      }
+    ],
+    "threePlayerOmitRole": "White",
+    "resourceOrder": [
+      "brick",
+      "wood",
+      "wool",
+      "wheat",
+      "ore"
+    ]
+  },
+  "variable": {
+    "coastEdgesClockwise": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      17,
+      22,
+      32,
+      38,
+      48,
+      53,
+      61,
+      65,
+      71,
+      70,
+      69,
+      68,
+      67,
+      66,
+      62,
+      54,
+      49,
+      39,
+      33,
+      23,
+      18,
+      10,
+      6
+    ],
+    "coastStartVertex": 3,
+    "segments": [
+      {
+        "slot": 0,
+        "name": "north",
+        "edges": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "slot": 1,
+        "name": "northeast",
+        "edges": [
+          5,
+          9,
+          17,
+          22,
+          32
+        ]
+      },
+      {
+        "slot": 2,
+        "name": "southeast",
+        "edges": [
+          38,
+          48,
+          53,
+          61,
+          65
+        ]
+      },
+      {
+        "slot": 3,
+        "name": "south",
+        "edges": [
+          71,
+          70,
+          69,
+          68,
+          67
+        ]
+      },
+      {
+        "slot": 4,
+        "name": "southwest",
+        "edges": [
+          66,
+          62,
+          54,
+          49,
+          39
+        ]
+      },
+      {
+        "slot": 5,
+        "name": "northwest",
+        "edges": [
+          33,
+          23,
+          18,
+          10,
+          6
+        ]
+      }
+    ],
+    "templateIdMeaning": "Printed protruding-tab connector number, 1 through 6; canonical ports measured clockwise along the destination five-edge segment.",
+    "templates": [
+      {
+        "id": 1,
+        "printedTab": 1,
+        "printedNotch": 6,
+        "ports": [
+          {
+            "offset": 0,
+            "kind": "generic"
+          },
+          {
+            "offset": 3,
+            "kind": "wool"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "printedTab": 2,
+        "printedNotch": 1,
+        "ports": [
+          {
+            "offset": 2,
+            "kind": "generic"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "printedTab": 3,
+        "printedNotch": 2,
+        "ports": [
+          {
+            "offset": 0,
+            "kind": "generic"
+          },
+          {
+            "offset": 3,
+            "kind": "brick"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "printedTab": 4,
+        "printedNotch": 3,
+        "ports": [
+          {
+            "offset": 2,
+            "kind": "wood"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "printedTab": 5,
+        "printedNotch": 4,
+        "ports": [
+          {
+            "offset": 0,
+            "kind": "generic"
+          },
+          {
+            "offset": 3,
+            "kind": "wheat"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "printedTab": 6,
+        "printedNotch": 5,
+        "ports": [
+          {
+            "offset": 2,
+            "kind": "ore"
+          }
+        ]
+      }
+    ],
+    "fixedFramePermutation": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "sourceComponentDisplayOrder": [
+      2,
+      4,
+      1,
+      3,
+      6,
+      5
+    ],
+    "numberLetters": "ABCDEFGHIJKLMNOPQR",
+    "numberValues": [
+      5,
+      2,
+      6,
+      3,
+      8,
+      10,
+      9,
+      12,
+      11,
+      4,
+      8,
+      10,
+      9,
+      4,
+      5,
+      6,
+      3,
+      11
+    ],
+    "spiralHexes": [
+      2,
+      1,
+      0,
+      3,
+      7,
+      12,
+      16,
+      17,
+      18,
+      15,
+      11,
+      6,
+      5,
+      4,
+      8,
+      13,
+      14,
+      10,
+      9
+    ],
+    "skipDesertWithoutConsumingLetter": true,
+    "sourcePage11Sample": {
+      "desertHex": 14,
+      "letterHexes": [
+        2,
+        1,
+        0,
+        3,
+        7,
+        12,
+        16,
+        17,
+        18,
+        15,
+        11,
+        6,
+        5,
+        4,
+        8,
+        13,
+        10,
+        9
+      ],
+      "numberByHex": [
+        6,
+        2,
+        5,
+        3,
+        4,
+        9,
+        10,
+        8,
+        5,
+        11,
+        3,
+        8,
+        10,
+        6,
+        null,
+        4,
+        9,
+        12,
+        11
+      ]
+    }
+  },
+  "confidence": {
+    "fixedTerrainNumbers": "high",
+    "fixedPieces": "high",
+    "fixedPorts": "high",
+    "frameKindsAndSpacing": "high",
+    "lettersAndSpiral": "high",
+    "diagramAmbiguities": [],
+    "note": "The graph-ID overlay uses approximate diagnostic image coordinates. Game-creation tests must compare results with this source capture."
+  }
+}

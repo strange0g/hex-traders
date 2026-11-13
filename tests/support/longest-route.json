@@ -1,0 +1,1618 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "prepared_on": "2026-11-09",
+    "rules": [
+      "BR001",
+      "BR033",
+      "BR034",
+      "BR035"
+    ],
+    "source": "tests/model_invariants.rs::EDGE_VERTICES",
+    "source_kind": "independently hand-recorded endpoint literal",
+    "endpoint_sha256_encoding": "SHA-256 of compact JSON list of endpoint pairs, no trailing newline",
+    "endpoint_sha256": "fab1cb317b2faefa851c273cf2bbfddbb235f195f7662020cd30f36dd4894b3d",
+    "production_graph_or_route_solver_used": false,
+    "award_cases_are_complete_legal_histories": false,
+    "max_vertex_degree": 3
+  },
+  "edge_vertices": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      7,
+      11
+    ],
+    [
+      7,
+      12
+    ],
+    [
+      8,
+      12
+    ],
+    [
+      8,
+      13
+    ],
+    [
+      9,
+      13
+    ],
+    [
+      9,
+      14
+    ],
+    [
+      10,
+      14
+    ],
+    [
+      10,
+      15
+    ],
+    [
+      11,
+      16
+    ],
+    [
+      12,
+      17
+    ],
+    [
+      13,
+      18
+    ],
+    [
+      14,
+      19
+    ],
+    [
+      15,
+      20
+    ],
+    [
+      16,
+      21
+    ],
+    [
+      16,
+      22
+    ],
+    [
+      17,
+      22
+    ],
+    [
+      17,
+      23
+    ],
+    [
+      18,
+      23
+    ],
+    [
+      18,
+      24
+    ],
+    [
+      19,
+      24
+    ],
+    [
+      19,
+      25
+    ],
+    [
+      20,
+      25
+    ],
+    [
+      20,
+      26
+    ],
+    [
+      21,
+      27
+    ],
+    [
+      22,
+      28
+    ],
+    [
+      23,
+      29
+    ],
+    [
+      24,
+      30
+    ],
+    [
+      25,
+      31
+    ],
+    [
+      26,
+      32
+    ],
+    [
+      27,
+      33
+    ],
+    [
+      28,
+      33
+    ],
+    [
+      28,
+      34
+    ],
+    [
+      29,
+      34
+    ],
+    [
+      29,
+      35
+    ],
+    [
+      30,
+      35
+    ],
+    [
+      30,
+      36
+    ],
+    [
+      31,
+      36
+    ],
+    [
+      31,
+      37
+    ],
+    [
+      32,
+      37
+    ],
+    [
+      33,
+      38
+    ],
+    [
+      34,
+      39
+    ],
+    [
+      35,
+      40
+    ],
+    [
+      36,
+      41
+    ],
+    [
+      37,
+      42
+    ],
+    [
+      38,
+      43
+    ],
+    [
+      39,
+      43
+    ],
+    [
+      39,
+      44
+    ],
+    [
+      40,
+      44
+    ],
+    [
+      40,
+      45
+    ],
+    [
+      41,
+      45
+    ],
+    [
+      41,
+      46
+    ],
+    [
+      42,
+      46
+    ],
+    [
+      43,
+      47
+    ],
+    [
+      44,
+      48
+    ],
+    [
+      45,
+      49
+    ],
+    [
+      46,
+      50
+    ],
+    [
+      47,
+      51
+    ],
+    [
+      48,
+      51
+    ],
+    [
+      48,
+      52
+    ],
+    [
+      49,
+      52
+    ],
+    [
+      49,
+      53
+    ],
+    [
+      50,
+      53
+    ]
+  ],
+  "route_cases": [
+    {
+      "name": "empty",
+      "road_owner": 0,
+      "roads": [],
+      "opponent_building_owner": null,
+      "opponent_building_vertices": [],
+      "own_building_vertices": [],
+      "expected_length": 0,
+      "roads_owned": 0,
+      "road_pieces_remaining": 15,
+      "witness": {
+        "road_ids": [],
+        "vertex_ids": [
+          0
+        ]
+      },
+      "upper_bound_reason": "No owned edges exist, so no nonempty trail exists.",
+      "oracle_verified": true,
+      "oracle_states_examined": 54
+    },
+    {
+      "name": "below_threshold_four",
+      "road_owner": 0,
+      "roads": [
+        0,
+        6,
+        10,
+        18
+      ],
+      "opponent_building_owner": null,
+      "opponent_building_vertices": [],
+      "own_building_vertices": [],
+      "expected_length": 4,
+      "roads_owned": 4,
+      "road_pieces_remaining": 11,
+      "witness": {
+        "road_ids": [
+          0,
+          6,
+          10,
+          18
+        ],
+        "vertex_ids": [
+          0,
+          3,
+          7,
+          11,
+          16
+        ]
+      },
+      "upper_bound_reason": "All four edges form a path; a trail cannot exceed the four owned edges.",
+      "oracle_verified": true,
+      "oracle_states_examined": 74
+    },
+    {
+      "name": "straight_five",
+      "road_owner": 0,
+      "roads": [
+        0,
+        6,
+        10,
+        18,
+        23
+      ],
+      "opponent_building_owner": null,
+      "opponent_building_vertices": [],
+      "own_building_vertices": [],
+      "expected_length": 5,
+      "roads_owned": 5,
+      "road_pieces_remaining": 10,
+      "witness": {
+        "road_ids": [
+          0,
+          6,
+          10,
+          18,
+          23
+        ],
+        "vertex_ids": [
+          0,
+          3,
+          7,
+          11,
+          16,
+          21
+        ]
+      },
+      "upper_bound_reason": "All five edges form a path; a trail cannot exceed the five owned edges.",
+      "oracle_verified": true,
+      "oracle_states_examined": 84
+    },
+    {
+      "name": "three_arm_branch",
+      "road_owner": 0,
+      "roads": [
+        0,
+        1,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "opponent_building_owner": null,
+      "opponent_building_vertices": [],
+      "own_building_vertices": [],
+      "expected_length": 6,
+      "roads_owned": 9,
+      "road_pieces_remaining": 6,
+      "witness": {
+        "road_ids": [
+          0,
+          1,
+          7,
+          12,
+          11,
+          10
+        ],
+        "vertex_ids": [
+          3,
+          0,
+          4,
+          8,
+          12,
+          7,
+          11
+        ]
+      },
+      "upper_bound_reason": "A tree trail is a simple path. Three length-3 arms meet at vertex 8; any trail uses at most two arms, for 6 edges.",
+      "oracle_verified": true,
+      "oracle_states_examined": 144
+    },
+    {
+      "name": "hex_zero_cycle",
+      "road_owner": 0,
+      "roads": [
+        0,
+        1,
+        6,
+        7,
+        11,
+        12
+      ],
+      "opponent_building_owner": null,
+      "opponent_building_vertices": [],
+      "own_building_vertices": [],
+      "expected_length": 6,
+      "roads_owned": 6,
+      "road_pieces_remaining": 9,
+      "witness": {
+        "road_ids": [
+          1,
+          0,
+          6,
+          11,
+          12,
+          7
+        ],
+        "vertex_ids": [
+          4,
+          0,
+          3,
+          7,
+          12,
+          8,
+          4
+        ]
+      },
+      "upper_bound_reason": "The six-edge cycle is a closed trail. Six owned edges is the absolute upper bound.",
+      "oracle_verified": true,
+      "oracle_states_examined": 120
+    },
+    {
+      "name": "cycle_with_tail",
+      "road_owner": 0,
+      "roads": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        11,
+        12
+      ],
+      "opponent_building_owner": null,
+      "opponent_building_vertices": [],
+      "own_building_vertices": [],
+      "expected_length": 8,
+      "roads_owned": 8,
+      "road_pieces_remaining": 7,
+      "witness": {
+        "road_ids": [
+          3,
+          2,
+          1,
+          0,
+          6,
+          11,
+          12,
+          7
+        ],
+        "vertex_ids": [
+          5,
+          1,
+          4,
+          0,
+          3,
+          7,
+          12,
+          8,
+          4
+        ]
+      },
+      "upper_bound_reason": "The witness uses all eight edges, ending at attachment vertex 4 after completing the cycle.",
+      "oracle_verified": true,
+      "oracle_states_examined": 170
+    },
+    {
+      "name": "touching_loops_shared_edge",
+      "road_owner": 0,
+      "roads": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        11,
+        12,
+        13,
+        14
+      ],
+      "opponent_building_owner": null,
+      "opponent_building_vertices": [],
+      "own_building_vertices": [],
+      "expected_length": 11,
+      "roads_owned": 11,
+      "road_pieces_remaining": 4,
+      "witness": {
+        "road_ids": [
+          1,
+          0,
+          6,
+          11,
+          12,
+          7,
+          2,
+          3,
+          8,
+          14,
+          13
+        ],
+        "vertex_ids": [
+          4,
+          0,
+          3,
+          7,
+          12,
+          8,
+          4,
+          1,
+          5,
+          9,
+          13,
+          8
+        ]
+      },
+      "upper_bound_reason": "Hexes 0 and 1 share edge 7. Their union has eleven edges; only vertices 4 and 8 have odd degree. This Euler trail uses all eleven distinct edges.",
+      "oracle_verified": true,
+      "oracle_states_examined": 412
+    },
+    {
+      "name": "separate_loops_with_bridge",
+      "road_owner": 0,
+      "roads": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        15,
+        16
+      ],
+      "opponent_building_owner": null,
+      "opponent_building_vertices": [],
+      "own_building_vertices": [],
+      "expected_length": 14,
+      "roads_owned": 14,
+      "road_pieces_remaining": 1,
+      "witness": {
+        "road_ids": [
+          1,
+          0,
+          6,
+          11,
+          12,
+          7,
+          2,
+          3,
+          4,
+          5,
+          9,
+          16,
+          15,
+          8
+        ],
+        "vertex_ids": [
+          4,
+          0,
+          3,
+          7,
+          12,
+          8,
+          4,
+          1,
+          5,
+          2,
+          6,
+          10,
+          14,
+          9,
+          5
+        ]
+      },
+      "upper_bound_reason": "Hexes 0 and 2 are vertex-disjoint and joined by edges 2,3. The witness uses all fourteen edges and repeats only legal vertices.",
+      "oracle_verified": true,
+      "oracle_states_examined": 522
+    },
+    {
+      "name": "opponent_blocks_middle",
+      "road_owner": 0,
+      "roads": [
+        0,
+        6,
+        10,
+        18,
+        23
+      ],
+      "opponent_building_owner": 1,
+      "opponent_building_vertices": [
+        7
+      ],
+      "own_building_vertices": [],
+      "expected_length": 3,
+      "roads_owned": 5,
+      "road_pieces_remaining": 10,
+      "witness": {
+        "road_ids": [
+          10,
+          18,
+          23
+        ],
+        "vertex_ids": [
+          7,
+          11,
+          16,
+          21
+        ]
+      },
+      "upper_bound_reason": "Blocker 7 separates a length-2 segment from a length-3 segment. It may start or end either segment, but cannot join them.",
+      "oracle_verified": true,
+      "oracle_states_examined": 72,
+      "alternative_witness_ends_at_blocker": {
+        "road_ids": [
+          23,
+          18,
+          10
+        ],
+        "vertex_ids": [
+          21,
+          16,
+          11,
+          7
+        ]
+      }
+    },
+    {
+      "name": "opponent_at_path_endpoint",
+      "road_owner": 0,
+      "roads": [
+        0,
+        6,
+        10,
+        18,
+        23
+      ],
+      "opponent_building_owner": 1,
+      "opponent_building_vertices": [
+        0
+      ],
+      "own_building_vertices": [],
+      "expected_length": 5,
+      "roads_owned": 5,
+      "road_pieces_remaining": 10,
+      "witness": {
+        "road_ids": [
+          0,
+          6,
+          10,
+          18,
+          23
+        ],
+        "vertex_ids": [
+          0,
+          3,
+          7,
+          11,
+          16,
+          21
+        ]
+      },
+      "upper_bound_reason": "The blocker is the start. All five edges can be used; there is no internal visit to it.",
+      "oracle_verified": true,
+      "oracle_states_examined": 84
+    },
+    {
+      "name": "own_building_preserves_continuity",
+      "road_owner": 0,
+      "roads": [
+        0,
+        6,
+        10,
+        18,
+        23
+      ],
+      "opponent_building_owner": null,
+      "opponent_building_vertices": [],
+      "own_building_vertices": [
+        7
+      ],
+      "expected_length": 5,
+      "roads_owned": 5,
+      "road_pieces_remaining": 10,
+      "witness": {
+        "road_ids": [
+          0,
+          6,
+          10,
+          18,
+          23
+        ],
+        "vertex_ids": [
+          0,
+          3,
+          7,
+          11,
+          16,
+          21
+        ]
+      },
+      "upper_bound_reason": "An own building at internal vertex 7 does not block any of this five-edge path.",
+      "oracle_verified": true,
+      "oracle_states_examined": 84
+    },
+    {
+      "name": "opponent_blocks_cycle_attachment",
+      "road_owner": 0,
+      "roads": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        11,
+        12
+      ],
+      "opponent_building_owner": 1,
+      "opponent_building_vertices": [
+        4
+      ],
+      "own_building_vertices": [],
+      "expected_length": 6,
+      "roads_owned": 8,
+      "road_pieces_remaining": 7,
+      "witness": {
+        "road_ids": [
+          1,
+          0,
+          6,
+          11,
+          12,
+          7
+        ],
+        "vertex_ids": [
+          4,
+          0,
+          3,
+          7,
+          12,
+          8,
+          4
+        ]
+      },
+      "upper_bound_reason": "A blocked start at 4 may traverse the cycle and return to 4 as its endpoint. It cannot then take the tail. The components after the blocked connection are a six-edge cycle and a two-edge tail.",
+      "oracle_verified": true,
+      "oracle_states_examined": 101
+    },
+    {
+      "name": "opponent_blocks_touching_loops",
+      "road_owner": 0,
+      "roads": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        11,
+        12,
+        13,
+        14
+      ],
+      "opponent_building_owner": 1,
+      "opponent_building_vertices": [
+        4
+      ],
+      "own_building_vertices": [],
+      "expected_length": 10,
+      "roads_owned": 11,
+      "road_pieces_remaining": 4,
+      "witness": {
+        "road_ids": [
+          1,
+          0,
+          6,
+          11,
+          12,
+          13,
+          14,
+          8,
+          3,
+          2
+        ],
+        "vertex_ids": [
+          4,
+          0,
+          3,
+          7,
+          12,
+          8,
+          13,
+          9,
+          5,
+          1,
+          4
+        ]
+      },
+      "upper_bound_reason": "The theta graph has internally disjoint 4-to-8 paths of lengths 5,5,1. A trail may use at most two because every return to blocked 4 terminates it. Choosing both length-5 paths achieves 10.",
+      "oracle_verified": true,
+      "oracle_states_examined": 183
+    },
+    {
+      "name": "fifteen_road_maximum_path",
+      "road_owner": 0,
+      "roads": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        9,
+        17,
+        22,
+        32,
+        38,
+        48,
+        53,
+        61,
+        65
+      ],
+      "opponent_building_owner": null,
+      "opponent_building_vertices": [],
+      "own_building_vertices": [],
+      "expected_length": 15,
+      "roads_owned": 15,
+      "road_pieces_remaining": 0,
+      "witness": {
+        "road_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          9,
+          17,
+          22,
+          32,
+          38,
+          48,
+          53,
+          61,
+          65
+        ],
+        "vertex_ids": [
+          3,
+          0,
+          4,
+          1,
+          5,
+          2,
+          6,
+          10,
+          15,
+          20,
+          26,
+          32,
+          37,
+          42,
+          46,
+          50
+        ]
+      },
+      "upper_bound_reason": "The fifteen-edge path uses the entire legal road inventory. No owned-edge trail can exceed 15.",
+      "oracle_verified": true,
+      "oracle_states_examined": 294
+    },
+    {
+      "name": "fifteen_owned_branching_longest_thirteen",
+      "road_owner": 0,
+      "roads": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        19
+      ],
+      "opponent_building_owner": null,
+      "opponent_building_vertices": [],
+      "own_building_vertices": [],
+      "expected_length": 13,
+      "roads_owned": 15,
+      "road_pieces_remaining": 0,
+      "witness": {
+        "road_ids": [
+          5,
+          4,
+          3,
+          2,
+          1,
+          0,
+          6,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "vertex_ids": [
+          6,
+          2,
+          5,
+          1,
+          4,
+          0,
+          3,
+          7,
+          12,
+          8,
+          13,
+          9,
+          14,
+          10
+        ]
+      },
+      "upper_bound_reason": "A six-edge cycle has tails of length 4 at vertices 4 and 8 and length 1 at 12. A trail has at most two pendant tails. The two length-4 tails plus the longer 4-to-8 cycle arc of length 5 give 13. A full cycle with only one tail gives at most 10; other tail pairs are shorter.",
+      "oracle_verified": true,
+      "oracle_states_examined": 456
+    }
+  ],
+  "award_sequences": [
+    {
+      "name": "threshold_retention_transfer_and_supply",
+      "input_kind": "synthetic calculator reconciliation sequence",
+      "initial_holder": null,
+      "steps": [
+        {
+          "name": "all_below_threshold",
+          "route_lengths": [
+            4,
+            3,
+            0,
+            0
+          ],
+          "roads_owned": [
+            4,
+            3,
+            0,
+            0
+          ],
+          "road_pieces_remaining": [
+            11,
+            12,
+            15,
+            15
+          ],
+          "prior_holder": null,
+          "expected_holder": null,
+          "expected_award_in_supply": true,
+          "expected_route_award_points": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "first_unique_threshold",
+          "route_lengths": [
+            5,
+            3,
+            0,
+            0
+          ],
+          "roads_owned": [
+            5,
+            3,
+            0,
+            0
+          ],
+          "road_pieces_remaining": [
+            10,
+            12,
+            15,
+            15
+          ],
+          "prior_holder": null,
+          "expected_holder": 0,
+          "expected_award_in_supply": false,
+          "expected_route_award_points": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "incumbent_keeps_tie_at_five",
+          "route_lengths": [
+            5,
+            5,
+            0,
+            0
+          ],
+          "roads_owned": [
+            5,
+            5,
+            0,
+            0
+          ],
+          "road_pieces_remaining": [
+            10,
+            10,
+            15,
+            15
+          ],
+          "prior_holder": 0,
+          "expected_holder": 0,
+          "expected_award_in_supply": false,
+          "expected_route_award_points": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "strictly_longer_player_one_takes",
+          "route_lengths": [
+            5,
+            6,
+            0,
+            0
+          ],
+          "roads_owned": [
+            5,
+            6,
+            0,
+            0
+          ],
+          "road_pieces_remaining": [
+            10,
+            9,
+            15,
+            15
+          ],
+          "prior_holder": 0,
+          "expected_holder": 1,
+          "expected_award_in_supply": false,
+          "expected_route_award_points": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "incumbent_keeps_tie_at_six",
+          "route_lengths": [
+            6,
+            6,
+            0,
+            0
+          ],
+          "roads_owned": [
+            6,
+            6,
+            0,
+            0
+          ],
+          "road_pieces_remaining": [
+            9,
+            9,
+            15,
+            15
+          ],
+          "prior_holder": 1,
+          "expected_holder": 1,
+          "expected_award_in_supply": false,
+          "expected_route_award_points": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "incumbent_blocked_unique_maximum_transfers",
+          "route_lengths": [
+            6,
+            3,
+            5,
+            0
+          ],
+          "roads_owned": [
+            6,
+            6,
+            5,
+            0
+          ],
+          "road_pieces_remaining": [
+            9,
+            9,
+            10,
+            15
+          ],
+          "prior_holder": 1,
+          "expected_holder": 0,
+          "expected_award_in_supply": false,
+          "expected_route_award_points": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "incumbent_blocked_other_players_tie_returns_supply",
+          "route_lengths": [
+            3,
+            5,
+            5,
+            0
+          ],
+          "roads_owned": [
+            6,
+            6,
+            5,
+            0
+          ],
+          "road_pieces_remaining": [
+            9,
+            9,
+            10,
+            15
+          ],
+          "prior_holder": 0,
+          "expected_holder": null,
+          "expected_award_in_supply": true,
+          "expected_route_award_points": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "supply_tie_stays_supply",
+          "route_lengths": [
+            3,
+            5,
+            5,
+            0
+          ],
+          "roads_owned": [
+            6,
+            6,
+            5,
+            0
+          ],
+          "road_pieces_remaining": [
+            9,
+            9,
+            10,
+            15
+          ],
+          "prior_holder": null,
+          "expected_holder": null,
+          "expected_award_in_supply": true,
+          "expected_route_award_points": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "unique_player_two_gains_after_growth",
+          "route_lengths": [
+            3,
+            5,
+            6,
+            0
+          ],
+          "roads_owned": [
+            6,
+            6,
+            6,
+            0
+          ],
+          "road_pieces_remaining": [
+            9,
+            9,
+            9,
+            15
+          ],
+          "prior_holder": null,
+          "expected_holder": 2,
+          "expected_award_in_supply": false,
+          "expected_route_award_points": [
+            0,
+            0,
+            2,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "no_qualifying_route_returns_supply",
+          "route_lengths": [
+            3,
+            4,
+            4,
+            0
+          ],
+          "roads_owned": [
+            6,
+            6,
+            6,
+            0
+          ],
+          "road_pieces_remaining": [
+            9,
+            9,
+            9,
+            15
+          ],
+          "prior_holder": 2,
+          "expected_holder": null,
+          "expected_award_in_supply": true,
+          "expected_route_award_points": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "lost_incumbent_still_qualifies_but_is_not_maximum",
+      "input_kind": "synthetic calculator reconciliation cases with incumbent 0",
+      "initial_holder": 0,
+      "steps": [
+        {
+          "name": "longer_players_tie_returns_supply",
+          "route_lengths": [
+            5,
+            6,
+            6,
+            0
+          ],
+          "roads_owned": [
+            8,
+            6,
+            6,
+            0
+          ],
+          "road_pieces_remaining": [
+            7,
+            9,
+            9,
+            15
+          ],
+          "prior_holder": 0,
+          "expected_holder": null,
+          "expected_award_in_supply": true,
+          "expected_route_award_points": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "unique_maximum_can_take_from_supply",
+          "route_lengths": [
+            5,
+            6,
+            7,
+            0
+          ],
+          "roads_owned": [
+            8,
+            6,
+            7,
+            0
+          ],
+          "road_pieces_remaining": [
+            7,
+            9,
+            8,
+            15
+          ],
+          "prior_holder": null,
+          "expected_holder": 2,
+          "expected_award_in_supply": false,
+          "expected_route_award_points": [
+            0,
+            0,
+            2,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "full_road_stock_does_not_score_directly",
+      "input_kind": "synthetic calculator reconciliation cases",
+      "initial_holder": null,
+      "steps": [
+        {
+          "name": "fifteen_edge_maximum_awards_two_points",
+          "route_lengths": [
+            15,
+            14,
+            0,
+            0
+          ],
+          "roads_owned": [
+            15,
+            14,
+            0,
+            0
+          ],
+          "road_pieces_remaining": [
+            0,
+            1,
+            15,
+            15
+          ],
+          "prior_holder": null,
+          "expected_holder": 0,
+          "expected_award_in_supply": false,
+          "expected_route_award_points": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "incumbent_keeps_fifteen_tie",
+          "route_lengths": [
+            15,
+            15,
+            0,
+            0
+          ],
+          "roads_owned": [
+            15,
+            15,
+            0,
+            0
+          ],
+          "road_pieces_remaining": [
+            0,
+            0,
+            15,
+            15
+          ],
+          "prior_holder": 0,
+          "expected_holder": 0,
+          "expected_award_in_supply": false,
+          "expected_route_award_points": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "fifteen_owned_branching_has_only_thirteen_length",
+          "route_lengths": [
+            13,
+            14,
+            0,
+            0
+          ],
+          "roads_owned": [
+            15,
+            14,
+            0,
+            0
+          ],
+          "road_pieces_remaining": [
+            0,
+            1,
+            15,
+            15
+          ],
+          "prior_holder": 0,
+          "expected_holder": 1,
+          "expected_award_in_supply": false,
+          "expected_route_award_points": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "no_incumbent_equal_qualifiers",
+      "input_kind": "synthetic calculator reconciliation case",
+      "initial_holder": null,
+      "steps": [
+        {
+          "name": "tied_qualifying_maximum_stays_supply",
+          "route_lengths": [
+            5,
+            5,
+            0,
+            0
+          ],
+          "roads_owned": [
+            5,
+            5,
+            0,
+            0
+          ],
+          "road_pieces_remaining": [
+            10,
+            10,
+            15,
+            15
+          ],
+          "prior_holder": null,
+          "expected_holder": null,
+          "expected_award_in_supply": true,
+          "expected_route_award_points": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_direct_road_points": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "all_manual_witnesses_valid": true,
+    "all_expected_lengths_match_exhaustive_subset_dp": true,
+    "route_case_count": 15,
+    "award_step_count": 16,
+    "invalid_witness_controls_rejected": 2
+  }
+}
