@@ -46,6 +46,16 @@ jobs:
           rustc --version
           cargo --version
           python3 -c "import tomllib; assert tomllib.load(open('rust-toolchain.toml', 'rb'))['toolchain']['channel'] == '1.98.1'"
+      - name: Synthetic toolerror gate control
+        run: |
+          python3 - <<'PYCONTROL'
+          from pathlib import Path
+          import os,subprocess,sys
+          p=Path('/tmp/ci-failed-tool');p.mkdir()
+          git=p/'git';git.write_text('#!/bin/sh\nexit 127\n');git.chmod(0o755)
+          env=os.environ.copy();env['PATH']=str(p)+':'+env['PATH']
+          sys.exit(subprocess.run([sys.executable,'scripts/check-branding.py','--history'],env=env).returncode)
+          PYCONTROL
       - name: Verify native library and release tree
         run: |
           cargo check --locked --all-targets
