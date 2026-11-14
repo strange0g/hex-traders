@@ -601,7 +601,12 @@ release waiver is implied.
 <a id="t52"></a>
 ### T52: Review the frozen release candidate independently
 
-- [ ] T52 complete
+- [x] T52 complete for v0.1.0 under R01
+
+**Completion evidence, 14 November 2026:** [Verified publication](evidence/release/t53-publication.md)
+and [independent decision](evidence/release/t52-decision.md#published-decision-and-completed-verification)
+record the exact immutable release, required checks and consumer/archive proof.
+T51 remains incomplete; R01 permits only this initial publication.
 
 **Module:** github-publication. **Dependencies:** [T50](#t50), [T50a](#t50a), [T51](#t51).
 
@@ -609,14 +614,14 @@ release waiver is implied.
 
 **Acceptance criteria:**
 
-- [ ] Independent reviews assess correctness/readability/architecture/performance, trust boundaries/workflow/private material, and rule/fixture/control coverage against the exact candidate and actual hosted/local evidence.
-- [ ] No unresolved release-blocking finding remains; necessary repairs become focused tasks and repeat affected checks/review without weakening any approved requirement.
-- [ ] A fresh release decision names assessed commit, required checks, performance limitations, immutable-tag/recovery procedure, prepared notes/changelog and repository enforcement evidence.
+- [x] Independent reviews assess correctness/readability/architecture/performance, trust boundaries/workflow/private material, and rule/fixture/control coverage against the exact candidate and actual hosted/local evidence.
+- [x] No unresolved release-blocking finding remains; necessary repairs become focused tasks and repeat affected checks/review without weakening any approved requirement.
+- [x] A fresh release decision names assessed commit, required checks, performance limitations, immutable-tag/recovery procedure, prepared notes/changelog and repository enforcement evidence.
 
 **Verification:**
 
-- [ ] Run the complete fresh native and naming gates against the frozen candidate and verify all hosted checks on its actual SHA. Resolve specialist findings before GO; verify notice/package/source-archive selection and inspect every report for prohibited/private material.
-- [ ] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
+- [x] Run the complete fresh native and naming gates against the frozen candidate and verify all hosted checks on its actual SHA. Resolve specialist findings before GO; verify notice/package/source-archive selection and inspect every report for prohibited/private material.
+- [x] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
 
 **Files likely touched:** `tasks/ship-reports/code-review.md`, `tasks/ship-reports/security-audit.md`, `tasks/ship-reports/test-analysis.md`, `tasks/evidence/release/t52-decision.md`.
 
@@ -628,13 +633,28 @@ release waiver is implied.
 **Dependencies:** T51–T52.
 
 - [ ] Fresh native timing/memory evidence satisfies the unchanged review policy; independent reviews and exact-revision full local/hosted checks leave no release blocker.
-- [ ] Required affected checks and evidence pass; review the diff for weakened constraints, lost assertions, private material and unsupported claims.
-- [ ] Present the checkpoint evidence for human review or proceed under applicable autonomous build authorization; record actual status before continuing.
+- [x] Required affected checks and evidence pass; review the diff for weakened constraints, lost assertions, private material and unsupported claims.
+- [x] Present the checkpoint evidence for human review or proceed under applicable autonomous build authorization; record actual status before continuing.
+
+**R01 disposition:** the combined timing/memory criterion stays unchecked.
+Independent reviews and exact-revision local/hosted source/security/test checks
+passed; the maintainer approved initial publication with T51 unresolved.
+[Decision](evidence/release/t52-decision.md#published-decision-and-completed-verification)
+and [publication evidence](evidence/release/t53-publication.md) record the result.
 
 <a id="t53"></a>
 ### T53: Publish and verify the immutable initial release
 
-- [ ] T53 complete
+- [x] T53 complete for v0.1.0 under R01
+
+**Documentation closure:** the T53 completion entries take effect only after
+this documentation PR passes all required checks and merges through protected
+main. Until then, the release is verified and documentation closure is pending.
+
+**Completion evidence, 14 November 2026:** [Verified publication](evidence/release/t53-publication.md)
+and [independent decision](evidence/release/t52-decision.md#published-decision-and-completed-verification)
+record the exact immutable release, required checks and consumer/archive proof.
+T51 remains incomplete; R01 permits only this initial publication.
 
 **Module:** github-publication. **Dependencies:** [T52](#t52).
 
@@ -642,14 +662,14 @@ release waiver is implied.
 
 **Acceptance criteria:**
 
-- [ ] Annotated `v0.1.0` and the non-draft GitHub release identify the exact assessed commit, match Cargo/changelog version and prepared notes, and are protected from silent movement/deletion.
-- [ ] A clean remote clone at the tag passes relevant full build/test/coverage/advisory/naming checks and compiles a Git/path consumer; GitHub source ZIP/tar archives and Cargo file lists have only intended safe files/notices.
-- [ ] Readback evidence links the real repository/release/check runs and verified workspace location; post-publication status records use a checked documentation-only PR and distinguish later HEAD from the immutable release tag.
+- [x] Annotated `v0.1.0` and the non-draft GitHub release identify the exact assessed commit, match Cargo/changelog version and prepared notes, and are protected from silent movement/deletion.
+- [x] A clean remote clone at the tag passes relevant full build/test/coverage/advisory/naming checks and compiles a Git/path consumer; GitHub source ZIP/tar archives and Cargo file lists have only intended safe files/notices.
+- [x] Readback evidence links the real repository/release/check runs and verified workspace location; post-publication status records use a checked documentation-only PR and distinguish later HEAD from the immutable release tag.
 
 **Verification:**
 
-- [ ] Run the specified annotated-tag/push and `gh release create ... --verify-tag --notes-file docs/releases/v0.1.0.md` commands only after revision verification. Clone and peel the remote tag, inspect generated archives without executing their contents, run the relevant standing gates and external consumer, then read back release visibility/tag/run conclusions.
-- [ ] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
+- [x] Run the specified annotated-tag/push and `gh release create ... --verify-tag --notes-file docs/releases/v0.1.0.md` commands only after revision verification. Clone and peel the remote tag, inspect generated archives without executing their contents, run the relevant standing gates and external consumer, then read back release visibility/tag/run conclusions.
+- [x] Relevant standing definition of done, scoped diff/provenance audit and actual evidence pass before completion is committed.
 
 **Files likely touched:** Annotated `v0.1.0` tag and GitHub release; `tasks/evidence/release/t53-publication.md`; final task/checkpoint status via a documentation-only PR.
 
@@ -660,9 +680,17 @@ release waiver is implied.
 
 **Dependencies:** T53.
 
-- [ ] The public release/tag, clean remote consumer, generated archives, active local checkout and completion evidence are verified; the release tag stays immutable.
-- [ ] Required affected checks and evidence pass; review the diff for weakened constraints, lost assertions, private material and unsupported claims.
-- [ ] Present the checkpoint evidence for human review or proceed under applicable autonomous build authorization; record actual status before continuing.
+- [x] The public release/tag, clean remote consumer, generated archives, active local checkout and completion evidence are verified; the release tag stays immutable.
+- [x] Required affected checks and evidence pass; review the diff for weakened constraints, lost assertions, private material and unsupported claims.
+- [x] Present the checkpoint evidence for human review or proceed under applicable autonomous build authorization; record actual status before continuing.
+
+**Completion evidence, 14 November 2026:** [T53](evidence/release/t53-publication.md)
+verifies publication, clean consumer/archive checks, the synchronized active
+checkout and privately preserved originals. This documentation PR records
+completion separately from immutable v0.1.0. C21 completion entries take effect
+only after this PR passes all required checks and merges through protected main;
+until then, documentation closure is pending. T51 stays open under the standing
+policy; the initial-release R01 exception is consumed.
 
 ## Release execution notes
 

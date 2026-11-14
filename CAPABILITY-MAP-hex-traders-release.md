@@ -4,8 +4,10 @@ Status: approved by the user on 13 November 2026. The subsequent clarification
 confirmed approval without additional scope changes. Publication settings, fresh
 history, local rename and initial-release compatibility are approved.
 Autonomous implementation was approved by `$build auto` on 13 November 2026.
-Native identity T37 is verified; fresh history, relocation and publication
-remain pending their respective task gates. The approved engine map in
+Native identity, fresh history, relocation and initial publication are verified
+in [the task record](tasks/todo.md#hex-traders-release) and
+[T53 evidence](tasks/evidence/release/t53-publication.md). T51 remains open;
+v0.1.0 publication uses the release-only R01 exception. The approved engine map in
 `CAPABILITY-MAP.md`, engine
 specifications, completed task evidence, and quality contract remain authoritative.
 

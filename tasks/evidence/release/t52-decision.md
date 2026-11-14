@@ -63,3 +63,30 @@ No host setting, power policy, service or unrelated process is modified for this
 release. Browser/Wasm, hosted gameplay and package-registry publication remain
 outside scope. R01 acknowledges the performance uncertainty only; other release
 blockers must still be resolved.
+
+## Published decision and completed verification
+
+**GO for the initial source release under R01; publication verified on
+14 November 2026.** The released commit is
+`6f2d992581ab13bb782b9ffde9dd1ca982f85b06`, tree
+`6a821cac3bba0bfab645c047b7f3c9770e2e7878`; annotated `v0.1.0` tag object
+`8ec6847cbe1832f8ba29471395493d807c9663ac` peels to that exact commit.
+The reviewed PR #9 head `1b1a7e195bbde0c52725eaf0d220738fdcde02cd` has the
+same tree, and all three independent assessments rebound approval to the merged
+source. Full [code](../../ship-reports/code-review.md),
+[security](../../ship-reports/security-review.md) and
+[test](../../ship-reports/test-review.md) reports are byte-identical to retained
+originals; their scopes and original outstanding-check statements remain intact.
+
+[T53 publication evidence](t53-publication.md) records successful exact-SHA PR,
+main and tag checks under Actions app 15368, current protections, the clean-tag
+200-test/11-doctest run with 98.72% coverage and retained advisory retry, the
+working locked Git consumer, matching generated source archives and metadata
+disclosure. It also records the corrected scanner-cache guard incident. No
+remaining source/security/test publication blocker was identified. T51 and
+C20's combined performance criterion remain unchecked; no timing acceptance is
+claimed. R01 expires with this publication and does not waive future requirements.
+
+These completion records follow in a reviewed documentation-only PR. Any later
+main HEAD is distinct from the immutable released commit above. The recovery
+procedure remains unchanged.
