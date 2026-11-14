@@ -10,8 +10,7 @@ Implementation and verification status are recorded in [tasks/todo.md](tasks/tod
 
 Historical measurements and completed-checkpoint conclusions below describe the
 approved native baseline. Exact original evidence is privately preserved; current
-release verification is recorded in the task list. No threshold or exception has
-changed.
+release verification is recorded in the task list. No threshold has changed; the release-only exception is recorded below.
 
 ## Floor
 
@@ -112,6 +111,25 @@ or broken block an enforcement claim; report the limitation clearly.
 
 ## Exceptions
 
-None. Any exception must record rule, affected paths, concrete reason, approved
-owner, and expiry no later than 90 days after approval. RQ1/RQ2 are approved
-engine policies in SPEC-base-rules.md, not exceptions to the quality bar.
+Any exception must record rule, affected paths, concrete reason, approved owner,
+and expiry no later than 90 days after approval. RQ1/RQ2 are approved engine
+policies in SPEC-base-rules.md, not exceptions to the quality bar.
+
+### R01: Initial source release with unresolved native timing acceptance
+
+- **Approval and owner:** maintainer `strange0g`, 14 November 2026, explicitly
+  instructed “proceed with the release” after being informed that T51 and the
+  release were pending because clock/turbo conditions prevented acceptance.
+- **Reason and scope:** publish the initial `v0.1.0` GitHub source release while
+  disclosing the unresolved T51 comparison and incomplete current public
+  performance evidence. This permits its T52/C20 release decision and T53
+  publication to proceed; it does not complete T51 or establish a timing pass.
+  Affected paths are this record, `docs/releases/v0.1.0.md`, `tasks/todo.md`, and
+  `tasks/evidence/release/t52-decision.md`.
+- **Limits:** the manual 5% rule, fixtures, assertions, security/build/test gates
+  and all future release requirements remain unchanged. No confirmed regression
+  tradeoff, machine tuning, missing security check or private evidence publication
+  is approved by R01. Original measurements remain privately recoverable.
+- **Expiry:** completion of `v0.1.0` publication or 28 November 2026, whichever
+  comes first. R01 grants no continuing or future-release waiver; resolving T51
+  still requires evidence under the standing policy.

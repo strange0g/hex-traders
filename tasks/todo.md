@@ -573,6 +573,12 @@ base branches to `main`. Remove only that PR filter.
 
 - [ ] T51 complete
 
+**Release-only authorization, 14 November 2026:** the maintainer instructed
+publication despite the disclosed timing uncertainty. [R01](../CONSTRAINTS.md#r01-initial-source-release-with-unresolved-native-timing-acceptance)
+permits the initial T52/C20/T53 release path to proceed with this limitation
+explicitly acknowledged. T51 remains incomplete; no performance pass or future
+release waiver is implied.
+
 **Module:** hex-traders-branding, github-publication. **Dependencies:** [T49](#t49); can proceed while T50 awaits authentication.
 
 **Description:** Measure the renamed candidate on the documented native reference machine with fixed fixtures and repeat variability. Retain timing and actual retained-memory/allocation evidence separately from hosted checks.
