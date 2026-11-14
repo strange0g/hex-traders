@@ -5,8 +5,9 @@ Belongs to the approved
 [release capability map](CAPABILITY-MAP-hex-traders-release.md) and depends on the
 [branding provider](SPEC-hex-traders-branding.md). This document specifies
 publication. The public repository and enforced checks are verified in
-[T50](tasks/evidence/release/t50-hosted.md); the initial release still requires
-the independent candidate decision and publication verification in T52–T53.
+[T50](tasks/evidence/release/t50-hosted.md). The initial `v0.1.0` assessment and
+publication are verified in [T52–T53](tasks/evidence/release/t53-publication.md)
+under the release-only R01 exception; T51 performance acceptance remains open.
 
 ## Objective
 

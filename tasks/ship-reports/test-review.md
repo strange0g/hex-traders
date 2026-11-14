@@ -1,0 +1,26 @@
+# Test Coverage Analysis — release candidate 1b1a7e1
+
+Assessed 14 November 2026. Frozen commit `1b1a7e195bbde0c52725eaf0d220738fdcde02cd`, tree `6a821cac3bba0bfab645c047b7f3c9770e2e7878`, is clean. Compared with `01296e0fee8c89a5efbbf08e215c2673f9e1f8c9`, only `CONSTRAINTS.md`, release notes, `tasks/todo.md`, and the new release-decision record changed. All 235 shared unchanged tracked files match the recorded tested content and modes; no paths were deleted. This includes the 89 source, test, fixture, benchmark, Cargo and toolchain files. The single change since the previously reviewed candidate corrects the constraints introduction to acknowledge R01, consistent with the exception recorded below. No new test is warranted for these documentation changes.
+
+## Current coverage
+
+**Critical test/coverage gaps: none found. Required native behavioral test/coverage gaps: none found in the reviewed scope.** The previously reviewed rule map resolves 38 requirements to 106 references/105 distinct passing tests. Its analysis describes literal fixtures and direct assertions for rules, privacy, replay and rejection atomicity. I independently read representative shortage, free-road, receipt-projection, replay and full-game fixture/provenance assertions; this is not a line-by-line rereview of every test.
+
+The fresh native run belongs to the unchanged input tree `01296e0`, not this later documentation commit. I checked all 31 entries in its evidence manifest and matched the 238 pre/after/final tracked hashes and modes to the original clean tree. The retained private archive's listed native log/JSON files match the source originals byte-for-byte; the checksummed archive and its other listed exposed artifacts verify. The archive intentionally omits Cargo target output and does not include the temporary native run script. Raw logs and recorded commands support 200 passing unit/integration tests, 11 passing doctests, no failures or ignored tests, and 5,955/6,032 (98.72%) library lines against the unchanged 90% floor. They also support build/check, formatting, lint, documentation, 20 benchmark-smoke cases, branding and package-list passes. The advisory command initially failed because its database lock was inaccessible; the identical authorized retry passed. The line figure includes inline tests and has no branch-coverage measurement; it does not prove all paths or states.
+
+The retained independent test assessment reports four focused mutations: shortage allocation, free-road continuation, purchase privacy and replay restoration. In each, its baseline and restored selected tests passed, while the mutated test failed. These demonstrate sensitivity only for those deliberate mutations, not a whole-project mutation score. The six frozen winning histories, boundary/privacy assertions and bounded property tests supply useful behavioral evidence, not exhaustive exploration. Browser/Wasm, other platforms, network/storage/authentication hosts and historical oracle reruns are outside this assessment.
+
+## Performance and release decision
+
+T51 remains **unresolved**, and the 20-case smoke run is not timing acceptance. The private outcome and independent full-block report support the public decision's account of 31 synthetic collector controls, four valid captures, changing measured CPU caps/turbo/activity and no defensible matching-condition comparison. The later retained read-only observations show policy changes; they do not establish causation or a repeatable regression. R01 records the release-only exception, reason, affected paths, maintainer and expiry while keeping T51 incomplete and the standing threshold intact. The upstream release task reports the maintainer's informed instruction to proceed; this review did not independently witness that conversation. Do not call the timing gate passed or mark T51 complete.
+
+**Conditional native test assessment: PASS, with no new Critical or Required test finding. Overall publication decision is conditional:** actual frozen-revision full local and hosted checks and the other independent reviews remain required before tagging. Exact hosted `quality`, `coverage` and `advisories` results for `1b1a7e195bbde0c52725eaf0d220738fdcde02cd` were not available to this reviewer. After tagging, verify the peeled remote tag and clean remote clone, full applicable tests/coverage/advisories/naming, real external consumer, package selection, source ZIP/tar, notes, licenses, naming and privacy, and release readback. Record those actual outcomes; these pending checks cannot be inferred from unchanged source or the old hosted run.
+
+## Priority
+
+- **Critical:** None found in native test coverage.
+- **High / required:** Complete exact-candidate and post-tag verification described above. Keep R01's unresolved-performance disclosure attached to the release.
+- **Medium / future:** Extend bounded state exploration when relevant gameplay changes demand it; retain existing direct assertions and sensitive boundary checks.
+- **Low / future scope:** Test cross-target bindings and host integrations only when those consumers are in scope.
+
+Skipped builds, tests, benchmarks, hosted or remote actions, historical oracle reruns, and host/service changes in this review. Risk: finite tests do not prove all states, and the native timing comparison remains unresolved.

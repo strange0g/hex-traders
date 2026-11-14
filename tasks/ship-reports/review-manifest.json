@@ -1,0 +1,26 @@
+{
+  "reviewed_release_commit": "6f2d992581ab13bb782b9ffde9dd1ca982f85b06",
+  "reviewed_tree": "6a821cac3bba0bfab645c047b7f3c9770e2e7878",
+  "reports": [
+    {
+      "path": "tasks/ship-reports/code-review.md",
+      "sha256": "55966342aaa6fa1d8716c5feb216e0a0a2d0aab1405572245038c9b0826e4e9c",
+      "bytes": 7560,
+      "copy_matches_original": true
+    },
+    {
+      "path": "tasks/ship-reports/security-review.md",
+      "sha256": "fe89af88dad0ba7dcfe9d60540992a3989846205fe916278f81303e6385344a7",
+      "bytes": 8221,
+      "copy_matches_original": true
+    },
+    {
+      "path": "tasks/ship-reports/test-review.md",
+      "sha256": "e5a0a29b997963917fb4299d2a563a511d619beba9de6aeb6e84b1dbc4df670c",
+      "bytes": 5343,
+      "copy_matches_original": true
+    }
+  ],
+  "private_path_and_high_confidence_credential_scan": "passed",
+  "branding_scan": "passed"
+}
